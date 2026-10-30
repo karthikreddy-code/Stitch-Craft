@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | StitchCraft</title>
+  <link rel="icon" href="imges/Embroidered S-C Needlework Emblem.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+<header class="header">
+  <div class="logo">
+    <img src="imges/Embroidered S-C Needlework Emblem.png" alt="StitchCraft Logo">
+    <div class="brand-text">
+      <a href="index.html"><span class="brand-stitch">Stitch </span><span style="color: lightblue;">&amp;</span><span class="brand-craft"> Craft</span></a>
+      <p>choose your own design</p>
+    </div>
+  </div>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation"><span></span><span></span><span></span></label>
+  <div class="navbar">
+    <nav>
+      <div class="dropdown" id="homeDropdown">
+        <a href="index.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Home <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="index.html" class="active nav-link">Home – Premium</a>
+          <a href="eindex.html">Home – Elite</a>
+        </div>
+      </div>
+      <a href="products.html" class="current nav-link active">Products</a>
+      <a href="services.html" class="nav-link">services</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+     <!-- <a href="custom.html">Custom Design</a>
+      <a href="bulk.html">Bulk Orders</a>-->
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="display-options">
+      <button type="button" id="rtlMode" class="display-btn" aria-label="Toggle text direction" title="Switch to RTL">RTL</button>
+      <button type="button" id="themeMode" class="display-btn" aria-label="Switch to dark mode" title="Dark mode"><i class="fa-solid fa-moon"></i></button>
+    </div>
+    <div class="nav-actions"><a href="custom.html" class="btn">Get a Quote</a></div>
+  </div>
+</header>
+
+<!--SECTION 1-->
+<section style="padding: 75px 6%; background: var(--light);
+                color: var(--text); font-family: Arial, sans-serif;
+                transition: background 0.3s, color 0.3s;">
+
+  <div style="max-width: 1200px; margin: auto; display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+              align-items: center; gap: 45px;">
+
+    <!-- Hero Text -->
+    <div>
+      <p style="color: var(--pink); font-size: 13px; font-weight: bold;
+                letter-spacing: 3px; margin: 0 0 15px;">
+        STITCHCRAFT COLLECTION
+      </p>
+
+      <h1 style="font-family: Georgia, serif; color: var(--text);
+                 font-size: clamp(38px, 5vw, 62px); line-height: 1.12;
+                 margin: 0 0 22px;">
+        Discover Our
+        <span style="display: block; color: var(--pink); font-style: italic;">
+          Embroidered Products
+        </span>
+      </h1>
+
+      <p style="color: var(--muted); font-size: 16px; line-height: 1.9;
+                max-width: 520px; margin: 0 0 30px;">
+        Explore thoughtfully crafted embroidery pieces, personalized designs,
+        and elegant details made to bring your style and ideas to life.
+      </p>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+        <a href="https://www.google.com/search?sca_esv=b79ec4c4220f672a&sxsrf=APpeQnu80dwe-MsH1lXJgs22mLzUfgRvMQ:1793077456481&udm=2&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8c4u0nXx4bEIpwm1lnNH832SMIiTl3t-JZ4hGJOxPbHYRzcy6GgySVUpZky6o6nTl3yANz31fL3XIvRkTfoNBefg3cGlw6l4eYsWcHwcpFAwvKRuQYIHx4O8jI7q2P29S5kcU1ohbwTRhnOZ2hYPs8TPwU9KlaZERvH99w1Olcwj1Sbz1vyx3B0AnMQaaxzIr9OAIHMA&q=Embroidered+Products&sa=X&ved=2ahUKEwj2gOSGttmXAxWpTWcHHSjJM4wQtKgLegQIGRAB&biw=1536&bih=730&dpr=1.25#sv=CAMSUxoyKhBlLXRuX1VTWXgtcWF0RzRNMg50bl9VU1l4LXFhdEc0TToOOUQtbkFpREM3V2FmbU0gBCoXCgFzEhBlLXRuX1VTWXgtcWF0RzRNGAEwAVACGAcg6YD12Q9KCBACGAEgAigBs"
+           style="display: inline-block; background: var(--pink); color: #fff;
+                  padding: 15px 29px; border-radius: 30px;
+                  text-decoration: none; font-size: 15px; font-weight: bold;">
+          Browse Products →
+        </a>
+
+        <a href="contact.html"
+           style="display: inline-block; color: var(--text);
+                  background: var(--card); padding: 14px 29px;
+                  border: 1px solid var(--border); border-radius: 30px;
+                  text-decoration: none; font-size: 15px; font-weight: bold;">
+          Custom Enquiry
+        </a>
+      </div>
+
+      <p style="color: var(--muted); font-size: 13px; margin-top: 25px;">
+        Custom designs • Made with care • Elegant embroidery
+      </p>
+    </div>
+
+    <!-- Hero Image -->
+    <div style="position: relative; height: 600px;">
+      <img src="imges/beautiful embroidery designs.webp"
+           alt="Beautiful embroidered products"
+           style="width: 100%; height: 500px; object-fit: cover;
+                  display: block; border-radius: 18px;
+                  box-shadow: 0 15px 35px rgba(0,0,0,0.18); margin-top: 90px;">
+
+      <div style="position: absolute; left: 12px; bottom: 20px;
+                  background: var(--card); color: var(--text);
+                  padding: 17px 22px; border: 1px solid var(--border);
+                  border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15);;">
+
+        <p style="color: var(--pink); font-size: 11px; font-weight: bold;
+                  letter-spacing: 1.5px; margin: 0 0 5px;">
+          MADE WITH CARE
+        </p>
+
+        <p style="font-family: Georgia, serif; font-size: 18px; margin: 0;">
+          Details that make it special
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!--ENDING SECTION 1-->
+
+<!--SECTION 2-->
+<section id="product-categories" style="padding:70px 6%; background:var(--white); color:var(--text);">
+  <div style="max-width:1200px; margin:0 auto;">
+
+    <div style="text-align:center; margin-bottom:40px;">
+      <p style="color:var(--pink); font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase; margin:0 0 10px;">
+        Explore StitchCraft
+      </p>
+      <h2 style="font-size:clamp(28px,4vw,42px); margin:0 0 12px; color:var(--text);">
+        Product Categories
+      </h2>
+      <p style="max-width:650px; margin:0 auto; line-height:1.7; color:var(--muted);">
+        Discover beautifully embroidered pieces made to add a personal touch to every moment.
+      </p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:22px;">
+
+      <!-- Category 1 -->
+      <a href="products.html?category=clothing" style="text-decoration:none; color:inherit;">
+        <article style="height:100%; background:var(--light); border:1px solid var(--border); border-radius:18px; overflow:hidden; transition:transform .25s, box-shadow .25s;">
+          <img src="imges/Embroidered clothing.webp" alt="Embroidered clothing" style="width:100%; height:220px; object-fit:cover; display:block;">
+          <div style="padding:20px;">
+            <h3 style="margin:0 0 8px; font-size:20px; color:var(--text);">Embroidered Clothing</h3>
+            <p style="margin:0 0 14px; line-height:1.6; color:var(--muted);">Elegant embroidery for shirts, dresses, and everyday outfits.</p>
+            <span style="color:var(--pink); font-weight:700;">Explore Collection →</span>
+          </div>
+        </article>
+      </a>
+
+      <!-- Category 2 -->
+      <a href="products.html?category=home-decor" style="text-decoration:none; color:inherit;">
+        <article style="height:100%; background:var(--light); border:1px solid var(--border); border-radius:18px; overflow:hidden;">
+          <img src="imges/Embroidered home decor.avif" alt="Embroidered home decor" style="width:100%; height:220px; object-fit:cover; display:block;">
+          <div style="padding:20px;">
+            <h3 style="margin:0 0 8px; font-size:20px; color:var(--text);">Home Décor</h3>
+            <p style="margin:0 0 14px; line-height:1.6; color:var(--muted);">Decorative cushions, table linens, and charming accents.</p>
+            <span style="color:var(--pink); font-weight:700;">Explore Collection →</span>
+          </div>
+        </article>
+      </a>
+
+      <!-- Category 3 -->
+      <a href="products.html?category=personalized-gifts" style="text-decoration:none; color:inherit;">
+        <article style="height:100%; background:var(--light); border:1px solid var(--border); border-radius:18px; overflow:hidden;">
+          <img src="imges/Personalized embroidered gifts.webp" alt="Personalized embroidered gifts" style="width:100%; height:220px; object-fit:cover; display:block;">
+          <div style="padding:20px;">
+            <h3 style="margin:0 0 8px; font-size:20px; color:var(--text);">Personalized Gifts</h3>
+            <p style="margin:0 0 14px; line-height:1.6; color:var(--muted);">Custom names, initials, and thoughtful keepsakes.</p>
+            <span style="color:var(--pink); font-weight:700;">Explore Collection →</span>
+          </div>
+        </article>
+      </a>
+
+      <!-- Category 4 -->
+      <a href="products.html?category=bridal" style="text-decoration:none; color:inherit;">
+        <article style="height:100%; background:var(--light); border:1px solid var(--border); border-radius:18px; overflow:hidden;">
+          <img src="imges/Bridal Elegance.webp" alt="Bridal embroidery" style="width:100%; height:220px; object-fit:cover; display:block;">
+          <div style="padding:20px;">
+            <h3 style="margin:0 0 8px; font-size:20px; color:var(--text);">Bridal & Occasion</h3>
+            <p style="margin:0 0 14px; line-height:1.6; color:var(--muted);">Special embroidery for weddings and memorable events.</p>
+            <span style="color:var(--pink); font-weight:700;">Explore Collection →</span>
+          </div>
+        </article>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!--ENDING SECTION 2-->
+
+<!--SECTION 3-->
+<section id="featured-designs" style="padding:70px 6%; background:var(--light); color:var(--text);">
+  <div style="max-width:1200px; margin:0 auto;">
+
+    <!-- Section heading -->
+    <div style="text-align:center; margin-bottom:40px;">
+      <p style="margin:0 0 10px; color:var(--pink); font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase;">
+        Handpicked for You
+      </p>
+      <h2 style="margin:0 0 12px; color:var(--text); font-size:clamp(28px,4vw,42px);">
+        Featured Designs
+      </h2>
+      <p style="max-width:650px; margin:0 auto; color:var(--muted); line-height:1.7;">
+        Explore our standout embroidery designs, thoughtfully crafted to make every detail special.
+      </p>
+    </div>
+
+    <!-- Design cards -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:24px;">
+
+      <!-- Design 1 -->
+      <article style="background:var(--card); border:1px solid var(--border); border-radius:18px; overflow:hidden;">
+        <div style="position:relative;">
+          <img src="imges/Blooming Garden.jpg" alt="Floral embroidered design" style="display:block; width:100%; height:260px; object-fit:cover;">
+          <span style="position:absolute; top:14px; left:14px; background:var(--pink); color:#fff; padding:7px 12px; border-radius:20px; font-size:12px; font-weight:700;">
+            Best Seller
+          </span>
+        </div>
+        <div style="padding:20px;">
+          <p style="margin:0 0 7px; color:var(--muted); font-size:13px;">Floral Collection</p>
+          <h3 style="margin:0 0 10px; color:var(--text); font-size:20px;">Blooming Garden</h3>
+          <p style="margin:0 0 16px; color:var(--muted); line-height:1.6;">Delicate floral stitches with a graceful, timeless finish.</p>
+          <a href="view-design.html" style="color:var(--pink); font-weight:700; text-decoration:none;">View Design →</a>
+        </div>
+      </article>
+
+      <!-- Design 2 -->
+      <article style="background:var(--card); border:1px solid var(--border); border-radius:18px; overflow:hidden;">
+        <img src="imges/Royal Elegance.webp" alt="Bridal embroidered design" style="display:block; width:100%; height:260px; object-fit:cover;">
+        <div style="padding:20px;">
+          <p style="margin:0 0 7px; color:var(--muted); font-size:13px;">Bridal Collection</p>
+          <h3 style="margin:0 0 10px; color:var(--text); font-size:20px;">Royal Elegance</h3>
+          <p style="margin:0 0 16px; color:var(--muted); line-height:1.6;">Elegant embroidery designed for celebration.</p>
+          <a href="view-design.html" style="color:var(--pink); font-weight:700; text-decoration:none;">View Design →</a>
+        </div>
+      </article>
+
+      <!-- Design 3 -->
+      <article style="background:var(--card); border:1px solid var(--border); border-radius:18px; overflow:hidden;">
+        <img src="imges/Classic Monogram.jpg" alt="Personalized monogram embroidery" style="display:block; width:100%; height:260px; object-fit:cover;">
+        <div style="padding:20px;">
+          <p style="margin:0 0 7px; color:var(--muted); font-size:13px;">Personalized Collection</p>
+          <h3 style="margin:0 0 10px; color:var(--text); font-size:20px;">Classic Monogram</h3>
+          <p style="margin:0 0 16px; color:var(--muted); line-height:1.6;">Custom initials stitched with a refined, personal touch.</p>
+          <a href="view-design.html" style="color:var(--pink); font-weight:700; text-decoration:none;">View Design →</a>
+        </div>
+      </article>
+
+      <!-- Design 4 -->
+      <article style="background:var(--card); border:1px solid var(--border); border-radius:18px; overflow:hidden;">
+        <img src="imges/Heritage Motifs1.webp" alt="Traditional embroidered design" style="display:block; width:100%; height:260px; object-fit:cover;">
+        <div style="padding:20px;">
+          <p style="margin:0 0 7px; color:var(--muted); font-size:13px;">Traditional Collection</p>
+          <h3 style="margin:0 0 10px; color:var(--text); font-size:20px;">Heritage Motifs</h3>
+          <p style="margin:0 0 16px; color:var(--muted); line-height:1.6;">Inspired by traditional patterns and detailed craftsmanship.</p>
+          <a href="view-design.html" style="color:var(--pink); font-weight:700; text-decoration:none;">View Design →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!--ENDING SECTION 3-->
+
+<!--SECTION 4-->
+<section id="customization-options" style="padding:70px 6%; background:var(--white); color:var(--text);">
+  <div style="max-width:1200px; margin:0 auto;">
+
+    <!-- Section heading -->
+    <div style="text-align:center; margin-bottom:42px;">
+      <p style="margin:0 0 10px; color:var(--pink); font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase;">
+        Made Just for You
+      </p>
+      <h2 style="margin:0 0 12px; color:var(--text); font-size:clamp(28px,4vw,42px);">
+        Customization Options
+      </h2>
+      <p style="max-width:680px; margin:0 auto; color:var(--muted); line-height:1.7;">
+        Personalize your embroidery with your preferred design, colors, and finishing details.
+      </p>
+    </div>
+
+    <!-- Customization cards -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:22px;">
+
+      <!-- Option 1 -->
+      <article style="background:var(--light); border:1px solid var(--border); border-radius:18px; padding:26px;">
+        <div style="width:54px; height:54px; display:flex; align-items:center; justify-content:center; border-radius:14px; background:var(--light); color:var(--pink); font-size:26px; margin-bottom:18px;">
+          <img src="imges/folwer.png" alt="folwer" style="width: 50%;">
+        </div>
+        <h3 style="margin:0 0 10px; color:var(--text); font-size:20px;">Choose Your Design</h3>
+        <p style="margin:0; color:var(--muted); line-height:1.7;">
+          Select floral patterns, traditional motifs, initials, or share your own design idea.
+        </p>
+      </article>
+
+      <!-- Option 2 -->
+      <article style="background:var(--light); border:1px solid var(--border); border-radius:18px; padding:26px;">
+        <div style="width:54px; height:54px; display:flex; align-items:center; justify-content:center; border-radius:14px; background:var(--light); color:var(--pink); font-size:26px; margin-bottom:18px;">
+          <img src="imges/color.webp" alt="color" style="width: 50%;">
+        </div>
+        <h3 style="margin:0 0 10px; color:var(--text); font-size:20px;">Thread Colors</h3>
+        <p style="margin:0; color:var(--muted); line-height:1.7;">
+          Pick thread shades to complement your fabric, outfit, or personal style.
+        </p>
+      </article>
+
+      <!-- Option 3 -->
+      <article style="background:var(--light); border:1px solid var(--border); border-radius:18px; padding:26px;">
+        <div style="width:54px; height:54px; display:flex; align-items:center; justify-content:center; border-radius:14px; background:var(--light); color:var(--pink); font-size:26px; margin-bottom:18px;">
+          Aa
+        </div>
+        <h3 style="margin:0 0 10px; color:var(--text); font-size:20px;">Names & Initials</h3>
+        <p style="margin:0; color:var(--muted); line-height:1.7;">
+          Add names, initials, dates, or a meaningful message for a personal finish.
+        </p>
+      </article>
+
+      <!-- Option 4 -->
+      <article style="background:var(--light); border:1px solid var(--border); border-radius:18px; padding:26px;">
+        <div style="width:54px; height:54px; display:flex; align-items:center; justify-content:center; border-radius:14px; background:var(--light); color:var(--pink); font-size:26px; margin-bottom:18px;">
+          <img src="imges/sqaure.png" alt="square" style="width: 50%;">
+        </div>
+        <h3 style="margin:0 0 10px; color:var(--text); font-size:20px;">Size & Placement</h3>
+        <p style="margin:0; color:var(--muted); line-height:1.7;">
+          Choose the embroidery size and where it appears on your garment or keepsake.
+        </p>
+      </article>
+
+    </div>
+
+    <!-- Call to action -->
+    <div style="margin-top:36px; padding:30px; text-align:center; background:var(--light); border:1px solid var(--border); border-radius:18px;">
+      <h3 style="margin:0 0 10px; color:var(--text); font-size:23px;">Have a design in mind?</h3>
+      <p style="margin:0 0 20px; color:var(--muted); line-height:1.7;">
+        Tell us what you’d like, and we’ll help you bring your idea to life.
+      </p>
+      <a href="custom.html" style="display:inline-block; padding:13px 28px; background:var(--pink); color:#fff; border-radius:30px; text-decoration:none; font-weight:700;">
+        Request Customization
+      </a>
+    </div>
+
+  </div>
+</section>
+<!--ENDING SECTION 4-->
+
+<!--SECTION 5 =ORDER PROCESS-->
+<section id="ordering-process" style="padding:70px 6%; background:var(--light); color:var(--text);">
+  <div style="max-width:1200px; margin:0 auto;">
+
+    <!-- Section heading -->
+    <div style="text-align:center; margin-bottom:42px;">
+      <p style="margin:0 0 10px; color:var(--pink); font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase;">
+        Simple & Seamless
+      </p>
+      <h2 style="margin:0 0 12px; color:var(--text); font-size:clamp(28px,4vw,42px);">
+        Ordering Process
+      </h2>
+      <p style="max-width:680px; margin:0 auto; color:var(--muted); line-height:1.7;">
+        From choosing your favorite design to receiving your finished piece, ordering from StitchCraft is easy.
+      </p>
+    </div>
+
+    <!-- Process steps -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:22px;">
+
+      <!-- Step 1 -->
+      <article style="background:var(--card); border:1px solid var(--border); border-radius:18px; padding:26px;">
+        <div style="width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:var(--pink); color:#fff; border-radius:50%; font-size:18px; font-weight:700; margin-bottom:20px;">
+          01
+        </div>
+        <h3 style="margin:0 0 10px; color:var(--text); font-size:20px;">Choose Your Design</h3>
+        <p style="margin:0; color:var(--muted); line-height:1.7;">
+          Browse our collections and select an embroidered product or design you love.
+        </p>
+      </article>
+
+      <!-- Step 2 -->
+      <article style="background:var(--card); border:1px solid var(--border); border-radius:18px; padding:26px;">
+        <div style="width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:var(--pink); color:#fff; border-radius:50%; font-size:18px; font-weight:700; margin-bottom:20px;">
+          02
+        </div>
+        <h3 style="margin:0 0 10px; color:var(--text); font-size:20px;">Share Your Preferences</h3>
+        <p style="margin:0; color:var(--muted); line-height:1.7;">
+          Tell us your preferred colors, size, personalization, and any special requests.
+        </p>
+      </article>
+
+      <!-- Step 3 -->
+      <article style="background:var(--card); border:1px solid var(--border); border-radius:18px; padding:26px;">
+        <div style="width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:var(--pink); color:#fff; border-radius:50%; font-size:18px; font-weight:700; margin-bottom:20px;">
+          03
+        </div>
+        <h3 style="margin:0 0 10px; color:var(--text); font-size:20px;">Confirm Your Order</h3>
+        <p style="margin:0; color:var(--muted); line-height:1.7;">
+          We’ll confirm the design details, pricing, and estimated completion or delivery time.
+        </p>
+      </article>
+
+      <!-- Step 4 -->
+      <article style="background:var(--card); border:1px solid var(--border); border-radius:18px; padding:26px;">
+        <div style="width:48px; height:48px; display:flex; align-items:center; justify-content:center; background:var(--pink); color:#fff; border-radius:50%; font-size:18px; font-weight:700; margin-bottom:20px;">
+          04
+        </div>
+        <h3 style="margin:0 0 10px; color:var(--text); font-size:20px;">Receive Your Creation</h3>
+        <p style="margin:0; color:var(--muted); line-height:1.7;">
+          Your embroidered piece is prepared with care and delivered or made ready for collection.
+        </p>
+      </article>
+
+    </div>
+
+    <!-- Call to action -->
+    <div style="margin-top:36px; text-align:center;">
+      <a href="contact.html" style="display:inline-block; padding:14px 30px; background:var(--pink); color:#fff; border-radius:30px; text-decoration:none; font-weight:700;">
+        Start Your Order →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!--ENDING SECTION 5-->
+<!--SECTION 6-->
+<section id="product-enquiry-cta" style="padding:60px 6%; background:var(--white); color:var(--text);">
+  <div style="max-width:1100px; margin:0 auto; padding:clamp(28px,5vw,55px); background:var(--light); border:1px solid var(--border); border-radius:24px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:28px;">
+
+    <!-- CTA text -->
+    <div style="flex:1 1 400px;">
+      <p style="margin:0 0 12px; color:var(--pink); font-size:13px; font-weight:700; letter-spacing:2px; text-transform:uppercase;">
+        Let’s Create Something Special
+      </p>
+
+      <h2 style="margin:0 0 14px; color:var(--text); font-size:clamp(26px,4vw,38px); line-height:1.2;">
+        Have a Question About a Product?
+      </h2>
+
+      <p style="margin:0; max-width:600px; color:var(--muted); line-height:1.8;">
+        Need details about a design, custom embroidery, pricing, or delivery? Send us your enquiry and we’ll help you find the perfect piece.
+      </p>
+    </div>
+
+    <!-- CTA buttons -->
+    <div style="display:flex; flex-wrap:wrap; gap:12px; align-items:center;">
+      <a href="contact.html" style="display:inline-block; padding:14px 26px; background:var(--pink); color:#fff; border:1px solid var(--pink); border-radius:30px; text-decoration:none; font-weight:700;">
+        Enquire Now →
+      </a>
+
+      <a href="products.html" style="display:inline-block; padding:14px 26px; background:var(--card); color:var(--text); border:1px solid var(--border); border-radius:30px; text-decoration:none; font-weight:700;">
+        Browse Products
+      </a>
+    </div>
+
+  </div>
+</section>
+<!--ENDING SECTION 6-->
+<!--<main class="page-main">
+<section class="page-hero">
+  <h1>Our Products</h1>
+  <div class="underline"></div>
+  <p>Pick a product, then add your own embroidery design.</p>
+</section>
+<section class="section">
+  <div class="filters">
+    <button class="filter active" data-f="all">All</button>
+  </div>
+  <div class="product-grid">
+    <article class="product-card">
+      <img src="imges/Custom T-Shirt.jpg" alt="Custom T-Shirt">
+      <h3>Custom T-Shirt</h3>
+      <p>From ₹499</p>
+      <a href="custom.html" class="btn btn-small">Customize</a>
+    </article>
+    <article class="product-card">
+      <img src="imges/Embroidered Hoodie.jpg" alt="Embroidered Hoodie">
+      <h3>Embroidered Hoodie</h3>
+      <p>From ₹1,199</p>
+      <a href="custom.html" class="btn btn-small">Customize</a>
+    </article>
+    <article class="product-card">
+      <img src="imges/Monogram Jacket.jpg" alt="Monogram Jacket">
+      <h3>Monogram Jacket</h3>
+      <p>From ₹1,899</p>
+      <a href="custom.html" class="btn btn-small">Customize</a>
+    </article>
+    <article class="product-card">
+      <img src="imges/Bath Towel.jpg" alt="Bath Towel">
+      <h3>Bath Towel</h3>
+      <p>From ₹699</p>
+      <a href="custom.html" class="btn btn-small">Customize</a>
+    </article>
+    <article class="product-card">
+      <img src="imges/Hand Towel Set.jpg" alt="Hand Towel Set">
+      <h3>Hand Towel Set</h3>
+      <p>From ₹449</p>
+      <a href="custom.html" class="btn btn-small">Customize</a>
+    </article>
+    <article class="product-card">
+      <img src="imges/Tote Bag.jpg" alt="Tote Bag">
+      <h3>Tote Bag</h3>
+      <p>From ₹349</p>
+      <a href="custom.html" class="btn btn-small">Customize</a>
+    </article>
+    <article class="product-card">
+      <img src="imges/Backpack.jpg" alt="Backpack">
+      <h3>Backpack</h3>
+      <p>From ₹999</p>
+      <a href="custom.html" class="btn btn-small">Customize</a>
+    </article>
+    <article class="product-card">
+      <img src="imges/Cushion Cover.jpg" alt="Cushion Cover">
+      <h3>Cushion Cover</h3>
+      <p>From ₹399</p>
+      <a href="custom.html" class="btn btn-small">Customize</a>
+    </article>
+    <article class="product-card">
+      <img src="imges/Table Runner.jpg" alt="Table Runner">
+      <h3>Table Runner</h3>
+      <p>From ₹599</p>
+      <a href="custom.html" class="btn btn-small">Customize</a>
+    </article>
+  </div>
+</section>
+</main>-->
+
+<footer class="footer" id="contact">
+  <div class="footer-grid">
+    <div id="about">
+      <div class="logo">
+      <img src="imges/Embroidered S-C Needlework Emblem.png" alt="StitchCraft Logo" style="margin-top: -20px;">
+      <div class="brand-text">
+        <a href="#home"><span class="brand-stitch">Stitch </span><span style="color: lightblue;">&amp;</span><span class="brand-craft"> Craft</span></a>
+        <p><span style="color: black;"> choose your own design</span></p>
+      </div>
+    </div>
+      <p><span style="color: black;"> Details. Lasting memories.<br>Personalized with care, one stitch at a time.</span></p>
+      <div class="socials">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.pinterest.com/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="contact.html"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <!--<a href="custom.html">Custom Design</a>
+      <a href="bulk.html">Bulk Orders</a>-->
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      <h3>Customer Support</h3>
+      <a href="contact.html">FAQs</a>
+      <a href="contact.html">Shipping &amp; Delivery</a>
+      <a href="contact.html">Returns &amp; Exchanges</a>
+      <a href="contact.html">Care Instructions</a>
+      <a href="contact.html">Privacy Policy</a>
+    </div>
+
+    <div>
+      <h3>Contact Us</h3>
+      <a href="mailto:info@stitchcraft.com"> info@stitchcraft.com</a>
+      <a href="tel:+91 0000000000"> +91 0000000000</a>
+      <p><span style="color: black;">Monday - Friday: 9:00 AM - 6:00 PM</span></p>
+      <p><span style="color: black;"> B.Kothakota,Near Madanapalli,Annamayya(D)</span></p>
+
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>© 2026 StitchCraft. All rights reserved.</p>
+    <p>Terms and Conditions</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

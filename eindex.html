@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StitchCraft | Custom Embroidery</title>
+  <link rel="icon" href="imges/Embroidered S-C Needlework Emblem.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <img src="imges/Embroidered S-C Needlework Emblem.png" alt="StitchCraft Logo">
+    <div class="brand-text">
+      <a href="#home"><span class="brand-stitch">Stitch </span><span style="color: lightblue;">&amp;</span><span class="brand-craft"> Craft</span></a>
+      <p><span style="color: black;"> choose your own design</span></p>
+    </div>
+  </div>
+
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <div class="navbar">
+    <nav class="b">
+      <div class="dropdown" id="homeDropdown">
+        <a href="index.html" class="nav-link active dropdown-toggle" aria-haspopup="true" aria-expanded="false" >
+          Home <i class="fa-solid fa-chevron-down"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="index.html" class="nav-link">Home – Premium</a>
+          <a href="eindex.html" class="active">Home – Elite</a>
+        </div>
+      </div>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="services.html" class="nav-link">services</a>
+      <!--<a href="bulk.html">Bulk Orders</a>-->
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    
+
+    <div class="display-options">
+      <button type="button" id="rtlMode" class="display-btn" aria-label="Toggle text direction" title="Switch to RTL">RTL</button>
+      <button type="button" id="themeMode" class="display-btn" aria-label="Switch to dark mode" title="Dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+    <div class="nav-actions">
+      <a href="custom.html" class="btn">Get a Quote</a>
+    </div>
+  </div>
+  <style>
+    .stitch-hero {
+    height: 740px;
+    padding: 70px 25px;
+    margin-top: 40px;
+    margin-left: 70px;
+    margin-right: 70px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    background:
+      linear-gradient(rgba(10, 18, 25, 0.65), rgba(10, 18, 25, 0.78)),
+      url("imges/eindex.jpg") center/cover no-repeat;
+    overflow: hidden;
+  }
+
+  .stitch-hero-content {
+    max-width: 950px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .stitch-hero-badge {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 30px;
+    background: rgba(255,255,255,0.12);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .stitch-hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(45px, 7vw, 85px);
+    line-height: 1.08;
+    margin-bottom: 25px;
+    color: #fff;
+  }
+
+  .stitch-hero h1 span {
+    display: block;
+    color: #dc4962;
+    font-style: italic;
+  }
+
+
+  .stitch-hero-description {
+    max-width: 720px;
+    margin: 0 auto 35px;
+    color: rgba(255,255,255,0.85);
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .stitch-hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 55px;
+  }
+
+  .stitch-hero-btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+
+  .stitch-hero-btn-primary {
+    background: #dc4962;
+    color: #fff;
+    border: 1px solid #dc4962;
+  }
+
+  .stitch-hero-btn-primary:hover {
+    background: #bd354d;
+    transform: translateY(-3px);
+  }
+
+  .stitch-hero-btn-outline {
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.08);
+  }
+
+  .stitch-hero-btn-outline:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-3px);
+  }
+
+  .stitch-hero-stats {
+    max-width: 650px;
+    margin: 0 auto;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255,255,255,0.25);
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+  }
+
+  .stitch-hero-stat strong {
+    display: block;
+    color: #dc4962;
+    font-size: 36px;
+    margin-bottom: 8px;
+  }
+
+  .stitch-hero-stat small {
+    color: rgba(255,255,255,0.9);
+    font-size: 13px;
+  }
+
+  @media (max-width: 600px) {
+    .stitch-hero {
+      min-height: 680px;
+      padding: 55px 18px;
+    }
+
+    .stitch-hero-description {
+      font-size: 15px;
+    }
+
+    .stitch-hero-buttons {
+      margin-bottom: 40px;
+    }
+
+    .stitch-hero-btn {
+      padding: 14px 23px;
+    }
+
+    .stitch-hero-stats {
+      gap: 22px;
+    }
+
+    .stitch-hero-stat strong {
+      font-size: 25px;
+    }
+
+    .stitch-hero-stat small {
+      font-size: 11px;
+    }
+  }
+  </style>
+</header>
+
+<!---section 1-->
+
+<section class="stitch-hero">
+  <div class="stitch-hero-content">
+
+    <div class="stitch-hero-badge">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hearts" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.931.481c1.627-1.671 5.692 1.254 0 5.015-5.692-3.76-1.626-6.686 0-5.015m6.84 1.794c1.084-1.114 3.795.836 0 3.343-3.795-2.507-1.084-4.457 0-3.343M7.84 7.642c2.71-2.786 9.486 2.09 0 8.358-9.487-6.268-2.71-11.144 0-8.358"/>
+</svg> PREMIUM CUSTOM EMBROIDERY
+    </div>
+
+    <h1>
+      Every Stitch
+      <span>Tells Your Story</span>
+    </h1>
+
+    <p class="stitch-hero-description">
+      Transform your clothing and accessories with beautiful custom embroidery.
+      From personalized designs to elegant details, we bring your ideas to life
+      with care and craftsmanship.
+    </p>
+
+    <div class="stitch-hero-buttons">
+      <a href="products.html" class="stitch-hero-btn stitch-hero-btn-primary">
+        Explore Collection
+      </a>
+
+      <a href="contact.html" class="stitch-hero-btn stitch-hero-btn-outline">
+        Get a Quote
+      </a>
+    </div>
+
+    <div class="stitch-hero-stats">
+      <div class="stitch-hero-stat">
+        <strong>500+</strong>
+        <small>Custom Designs</small>
+      </div>
+
+      <div class="stitch-hero-stat">
+        <strong>100%</strong>
+        <small>Made with Care</small>
+      </div>
+
+      <div class="stitch-hero-stat">
+        <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hearts" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.931.481c1.627-1.671 5.692 1.254 0 5.015-5.692-3.76-1.626-6.686 0-5.015m6.84 1.794c1.084-1.114 3.795.836 0 3.343-3.795-2.507-1.084-4.457 0-3.343M7.84 7.642c2.71-2.786 9.486 2.09 0 8.358-9.487-6.268-2.71-11.144 0-8.358"/>
+</svg></strong>
+        <small>Unique Details</small>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!--ENDING SECTION 1-->
+
+<!--section2-->
+
+<section style="padding: 75px 6%; background: var(--white); font-family: Arial, sans-serif;">
+
+  <!-- Section Heading -->
+  <div style="text-align: center; max-width: 700px; margin: 0 auto 45px;">
+    <p style="color: #dc4962; font-size: 13px; font-weight: bold;
+              letter-spacing: 3px; margin-bottom: 12px;">
+      STITCHCRAFT EXCLUSIVE
+    </p>
+
+    <h2 style="font-family: Georgia, serif; color: #102537;
+               font-size: clamp(32px, 5vw, 48px); margin: 0 0 15px;">
+      Our <span style="color: #dc4962; font-style: italic;">Elite Collection</span>
+    </h2>
+
+    <p style="color: #687481; font-size: 16px; line-height: 1.8; margin: 0;">
+      Discover thoughtfully crafted embroidery pieces where fine details,
+      timeless designs, and exceptional craftsmanship come together.
+    </p>
+  </div>
+
+  <!-- Collection Cards -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+              gap: 25px; max-width: 1200px; margin: auto;">
+
+    <!-- Card 1 -->
+    <article style="background: #fff; border-radius: 14px; overflow: hidden;
+                    box-shadow: 0 8px 25px rgba(16,37,55,0.08);">
+      <img src="imges/FLORAL ARTISTRY.webp"
+           alt="Elegant floral embroidery"
+           style="width: 100%; height: 280px; object-fit: cover; display: block;">
+
+      <div style="padding: 23px;">
+        <p style="color: #dc4962; font-size: 12px; font-weight: bold;
+                  letter-spacing: 1.5px; margin: 0 0 9px;">
+          FLORAL ARTISTRY
+        </p>
+        <h3 style="color: #102537; font-family: Georgia, serif;
+                   font-size: 23px; margin: 0 0 10px;">
+          Bloom in Elegance
+        </h3>
+        <p style="color: #687481; font-size: 14px; line-height: 1.7; margin: 0 0 18px;">
+          Delicate floral patterns with beautifully detailed stitching.
+        </p>
+        <a href="eproduct.html"
+           style="color: #dc4962; text-decoration: none; font-weight: bold; font-size: 14px;">
+          Explore Collection &rarr;
+        </a>
+      </div>
+    </article>
+
+    <!-- Card 2 -->
+    <article style="background: #fff; border-radius: 14px; overflow: hidden;
+                    box-shadow: 0 8px 25px rgba(16,37,55,0.08);">
+      <img src="imges/TIMELESS TRADITION.jpg"
+           alt="Traditional embroidery design"
+           style="width: 100%; height: 280px; object-fit: cover; display: block;">
+
+      <div style="padding: 23px;">
+        <p style="color: #dc4962; font-size: 12px; font-weight: bold;
+                  letter-spacing: 1.5px; margin: 0 0 9px;">
+          TIMELESS TRADITION
+        </p>
+        <h3 style="color: #102537; font-family: Georgia, serif;
+                   font-size: 23px; margin: 0 0 10px;">
+          Heritage Threads
+        </h3>
+        <p style="color: #687481; font-size: 14px; line-height: 1.7; margin: 0 0 18px;">
+          Classic-inspired embroidery made for special occasions.
+        </p>
+        <a href="eproduct.html"
+           style="color: #dc4962; text-decoration: none; font-weight: bold; font-size: 14px;">
+          Explore Collection &rarr;
+        </a>
+      </div>
+    </article>
+
+    <!-- Card 3 -->
+    <article style="background: #fff; border-radius: 14px; overflow: hidden;
+                    box-shadow: 0 8px 25px rgba(16,37,55,0.08);">
+      <img src="imges/Personal Touch.webp"
+           alt="Personalized custom embroidery"
+           style="width: 100%; height: 280px; object-fit: cover; display: block;">
+
+      <div style="padding: 23px;">
+        <p style="color: #dc4962; font-size: 12px; font-weight: bold;
+                  letter-spacing: 1.5px; margin: 0 0 9px;">
+          MADE JUST FOR YOU
+        </p>
+        <h3 style="color: #102537; font-family: Georgia, serif;
+                   font-size: 23px; margin: 0 0 10px;">
+          Personal Touch
+        </h3>
+        <p style="color: #687481; font-size: 14px; line-height: 1.7; margin: 0 0 18px;">
+          Custom embroidery that brings your personal ideas to life.
+        </p>
+        <a href="custom.html"
+           style="color: #dc4962; text-decoration: none; font-weight: bold; font-size: 14px;">
+          Create Your Design &rarr;
+        </a>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- View All Button -->
+  <div style="text-align: center; margin-top: 40px;">
+    <a href="eproduct.html"
+       style="display: inline-block; background: #dc4962; color: #fff;
+              padding: 15px 32px; border-radius: 30px; text-decoration: none;
+              font-size: 15px; font-weight: bold;">
+      View All Collections
+    </a>
+  </div>
+
+</section>
+
+<!--ENDING SECTION 2-->
+
+
+
+<!--section3-->
+
+<section style="padding: 75px 6%; background: var(--light); font-family: Arial, sans-serif;">
+
+  <!-- Section Heading -->
+  <div style="text-align: center; max-width: 750px; margin: 0 auto 45px;">
+    <p style="color: #dc4962; font-size: 13px; font-weight: bold;
+              letter-spacing: 3px; margin: 0 0 12px;">
+      THE STITCHCRAFT DIFFERENCE
+    </p>
+
+    <h2 style="font-family: Georgia, serif; color: #102537;
+               font-size: clamp(32px, 5vw, 48px); margin: 0 0 15px;">
+      Signature <span style="color: #dc4962; font-style: italic;">Craftsmanship</span>
+    </h2>
+
+    <p style="color: #687481; font-size: 16px; line-height: 1.8; margin: 0;">
+      Every design is thoughtfully created and carefully stitched,
+      bringing artistry, quality, and a personal touch to every piece.
+    </p>
+  </div>
+
+  <!-- Craftsmanship Features -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+              gap: 25px; max-width: 1150px; margin: auto;">
+
+    <!-- Feature 1 -->
+    <div style="text-align: center; padding: 30px 22px; border: 1px solid #f0dfe2;
+                border-radius: 14px; background: #fffaf8;">
+      <div style="width: 65px; height: 65px; margin: 0 auto 20px;
+                  display: flex; align-items: center; justify-content: center;
+                  background: #fbe5e9; border-radius: 50%; font-size: 28px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bank2" viewBox="0 0 16 16">
+  <path d="M8.277.084a.5.5 0 0 0-.554 0l-7.5 5A.5.5 0 0 0 .5 6h1.875v7H1.5a.5.5 0 0 0 0 1h13a.5.5 0 1 0 0-1h-.875V6H15.5a.5.5 0 0 0 .277-.916zM12.375 6v7h-1.25V6zm-2.5 0v7h-1.25V6zm-2.5 0v7h-1.25V6zm-2.5 0v7h-1.25V6zM8 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2M.5 15a.5.5 0 0 0 0 1h15a.5.5 0 1 0 0-1z"/>
+</svg>
+      </div>
+      <h3 style="font-family: Georgia, serif; color: #102537;
+                 font-size: 22px; margin: 0 0 12px;">
+        Precision in Every Stitch
+      </h3>
+      <p style="color: #687481; font-size: 14px; line-height: 1.8; margin: 0;">
+        Carefully finished details create embroidery that looks refined and beautiful.
+      </p>
+    </div>
+
+    <!-- Feature 2 -->
+    <div style="text-align: center; padding: 30px 22px; border: 1px solid #f0dfe2;
+                border-radius: 14px; background: #fffaf8;">
+      <div style="width: 65px; height: 65px; margin: 0 auto 20px;
+                  display: flex; align-items: center; justify-content: center;
+                  background: #fbe5e9; border-radius: 50%; font-size: 28px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
+  <path d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+</svg>
+      </div>
+      <h3 style="font-family: Georgia, serif; color: #102537;
+                 font-size: 22px; margin: 0 0 12px;">
+        Thoughtful Materials
+      </h3>
+      <p style="color: #687481; font-size: 14px; line-height: 1.8; margin: 0;">
+        Designs are made with care, choosing threads and fabrics suited to each piece.
+      </p>
+    </div>
+
+    <!-- Feature 3 -->
+    <div style="text-align: center; padding: 30px 22px; border: 1px solid #f0dfe2;
+                border-radius: 14px; background: #fffaf8;">
+      <div style="width: 65px; height: 65px; margin: 0 auto 20px;
+                  display: flex; align-items: center; justify-content: center;
+                  background: #fbe5e9; border-radius: 50%; font-size: 28px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rainbow" viewBox="0 0 16 16">
+  <path d="M8 4.5a7 7 0 0 0-7 7 .5.5 0 0 1-1 0 8 8 0 1 1 16 0 .5.5 0 0 1-1 0 7 7 0 0 0-7-7m0 2a5 5 0 0 0-5 5 .5.5 0 0 1-1 0 6 6 0 1 1 12 0 .5.5 0 0 1-1 0 5 5 0 0 0-5-5m0 2a3 3 0 0 0-3 3 .5.5 0 0 1-1 0 4 4 0 1 1 8 0 .5.5 0 0 1-1 0 3 3 0 0 0-3-3m0 2a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 4 0 .5.5 0 0 1-1 0 1 1 0 0 0-1-1"/>
+</svg>
+      </div>
+      <h3 style="font-family: Georgia, serif; color: #102537;
+                 font-size: 22px; margin: 0 0 12px;">
+        Unique Design Details
+      </h3>
+      <p style="color: #687481; font-size: 14px; line-height: 1.8; margin: 0;">
+        From elegant patterns to personalized touches, each design feels distinctive.
+      </p>
+    </div>
+
+    <!-- Feature 4 -->
+    <div style="text-align: center; padding: 30px 22px; border: 1px solid #f0dfe2;
+                border-radius: 14px; background: #fffaf8;">
+      <div style="width: 65px; height: 65px; margin: 0 auto 20px;
+                  display: flex; align-items: center; justify-content: center;
+                  background: #fbe5e9; border-radius: 50%; font-size: 28px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hearts" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.931.481c1.627-1.671 5.692 1.254 0 5.015-5.692-3.76-1.626-6.686 0-5.015m6.84 1.794c1.084-1.114 3.795.836 0 3.343-3.795-2.507-1.084-4.457 0-3.343M7.84 7.642c2.71-2.786 9.486 2.09 0 8.358-9.487-6.268-2.71-11.144 0-8.358"/>
+</svg>
+      </div>
+      <h3 style="font-family: Georgia, serif; color: #102537;
+                 font-size: 22px; margin: 0 0 12px;">
+        Made with Care
+      </h3>
+      <p style="color: #687481; font-size: 14px; line-height: 1.8; margin: 0;">
+        We give every creation attention, from the first design idea to the final finish.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!--ENDING SECTION 3-->
+
+<!--SECTION 4-->
+
+<section style="padding: 75px 6%; background: var(--white); font-family: Arial, sans-serif;">
+
+  <!-- Section Heading -->
+  <div style="text-align: center; max-width: 750px; margin: 0 auto 45px;">
+    <p style="color: #dc4962; font-size: 13px; font-weight: bold;
+              letter-spacing: 3px; margin: 0 0 12px;">
+      WHAT WE OFFER
+    </p>
+
+    <h2 style="font-family: Georgia, serif; color: #102537;
+               font-size: clamp(32px, 5vw, 48px); margin: 0 0 15px;">
+      Our <span style="color: #dc4962; font-style: italic;">Premium Services</span>
+    </h2>
+
+    <p style="color: #687481; font-size: 16px; line-height: 1.8; margin: 0;">
+      From personalized embroidery to beautifully detailed custom pieces,
+      we offer services designed to make your ideas special.
+    </p>
+  </div>
+
+  <!-- Service Cards -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+              gap: 25px; max-width: 1200px; margin: auto;">
+
+    <!-- Service 1 -->
+    <article style="background: #fff; border-radius: 14px; padding: 30px 25px;
+                    border: 1px solid #f0dfe2; box-shadow: 0 8px 25px rgba(16,37,55,0.06);">
+      <div style="font-size: 34px; margin-bottom: 18px;"><img src="imges/nedle.webp" alt="nedle" style="width: 15%;"></div>
+      <h3 style="font-family: Georgia, serif; color: #102537;
+                 font-size: 23px; margin: 0 0 12px;">
+        Custom Embroidery
+      </h3>
+      <p style="color: #687481; font-size: 14px; line-height: 1.8; margin: 0;">
+        Bring your ideas to life with personalized embroidery made to match your style.
+      </p>
+    </article>
+
+    <!-- Service 2 -->
+    <article style="background: #fff; border-radius: 14px; padding: 30px 25px;
+                    border: 1px solid #f0dfe2; box-shadow: 0 8px 25px rgba(16,37,55,0.06);">
+      <div style="font-size: 34px; margin-bottom: 18px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-standing-dress" viewBox="0 0 16 16">
+  <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m-.5 12.25V12h1v3.25a.75.75 0 0 0 1.5 0V12h1l-1-5v-.215a.285.285 0 0 1 .56-.078l.793 2.777a.711.711 0 1 0 1.364-.405l-1.065-3.461A3 3 0 0 0 8.784 3.5H7.216a3 3 0 0 0-2.868 2.118L3.283 9.079a.711.711 0 1 0 1.365.405l.793-2.777a.285.285 0 0 1 .56.078V7l-1 5h1v3.25a.75.75 0 0 0 1.5 0Z"/>
+</svg></div>
+      <h3 style="font-family: Georgia, serif; color: #102537;
+                 font-size: 23px; margin: 0 0 12px;">
+        Bridal & Occasion Wear
+      </h3>
+      <p style="color: #687481; font-size: 14px; line-height: 1.8; margin: 0;">
+        Elegant embroidered details for celebrations, special events, and memorable moments.
+      </p>
+    </article>
+
+    <!-- Service 3 -->
+    <article style="background: #fff; border-radius: 14px; padding: 30px 25px;
+                    border: 1px solid #f0dfe2; box-shadow: 0 8px 25px rgba(16,37,55,0.06);">
+      <div style="font-size: 34px; margin-bottom: 18px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gift" viewBox="0 0 16 16">
+  <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 14.5V7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zM1 4v2h6V4zm8 0v2h6V4zm5 3H9v8h4.5a.5.5 0 0 0 .5-.5zm-7 8V7H2v7.5a.5.5 0 0 0 .5.5z"/>
+</svg></div>
+      <h3 style="font-family: Georgia, serif; color: #102537;
+                 font-size: 23px; margin: 0 0 12px;">
+        Personalized Gifts
+      </h3>
+      <p style="color: #687481; font-size: 14px; line-height: 1.8; margin: 0;">
+        Make gifts meaningful with names, initials, and custom embroidered designs.
+      </p>
+    </article>
+
+    <!-- Service 4 -->
+    <article style="background: #fff; border-radius: 14px; padding: 30px 25px;
+                    border: 1px solid #f0dfe2; box-shadow: 0 8px 25px rgba(16,37,55,0.06);">
+      <div style="font-size: 34px; margin-bottom: 18px;"><img src="imges/thread.webp" alt="thread" style="width: 15%;"></div>
+      <h3 style="font-family: Georgia, serif; color: #102537;
+                 font-size: 23px; margin: 0 0 12px;">
+        Embroidery for Businesses
+      </h3>
+      <p style="color: #687481; font-size: 14px; line-height: 1.8; margin: 0;">
+        Custom embroidered logos and designs for uniforms, teams, and business apparel.
+      </p>
+    </article>
+
+  </div>
+
+  <!-- Call to Action -->
+  <div style="text-align: center; margin-top: 42px;">
+    <a href="custom.html"
+       style="display: inline-block; background: #dc4962; color: #fff;
+              padding: 15px 32px; border-radius: 30px; text-decoration: none;
+              font-size: 15px; font-weight: bold;">
+      Request a Custom Design
+    </a>
+  </div>
+
+</section>
+
+<!--ENDING SECTION 4-->
+
+<!--SECTION 5-->
+
+<section style="padding: 75px 6%; background: var(--light); font-family: Arial, sans-serif;">
+
+  <!-- Section Heading -->
+  <div style="text-align: center; max-width: 750px; margin: 0 auto 45px;">
+    <p style="color: #dc4962; font-size: 13px; font-weight: bold;
+              letter-spacing: 3px; margin: 0 0 12px;">
+      OUR PORTFOLIO
+    </p>
+
+    <h2 style="font-family: Georgia, serif; color: #102537;
+               font-size: clamp(32px, 5vw, 48px); margin: 0 0 15px;">
+      Exclusive <span style="color: #dc4962; font-style: italic;">Project Gallery</span>
+    </h2>
+
+    <p style="color: #687481; font-size: 16px; line-height: 1.8; margin: 0;">
+      Explore selected embroidery projects showcasing creativity,
+      fine details, and the care behind every design.
+    </p>
+  </div>
+
+  <!-- Gallery Grid -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+              gap: 22px; max-width: 1200px; margin: auto;">
+
+    <!-- Gallery Item 1 -->
+    <div style="position: relative; overflow: hidden; border-radius: 14px;
+                background: #fff5f1;">
+      <img src="imges/FLORAL ARTISTRY.webp"
+           alt="Floral embroidery project"
+           style="width: 100%; height: 300px; object-fit: cover; display: block;">
+
+      <div style="padding: 18px 20px;">
+        <p style="color: #dc4962; font-size: 11px; font-weight: bold;
+                  letter-spacing: 1.5px; margin: 0 0 7px;">
+          FLORAL EMBROIDERY
+        </p>
+        <h3 style="font-family: Georgia, serif; color: #102537;
+                   font-size: 21px; margin: 0;">
+          Botanical Beauty
+        </h3>
+      </div>
+    </div>
+
+    <!-- Gallery Item 2 -->
+    <div style="position: relative; overflow: hidden; border-radius: 14px;
+                background: #fff5f1;">
+      <img src="imges/Bridal Elegance.webp"
+           alt="Bridal embroidery project"
+           style="width: 100%; height: 300px; object-fit: cover; display: block;">
+
+      <div style="padding: 18px 20px;">
+        <p style="color: #dc4962; font-size: 11px; font-weight: bold;
+                  letter-spacing: 1.5px; margin: 0 0 7px;">
+          OCCASION WEAR
+        </p>
+        <h3 style="font-family: Georgia, serif; color: #102537;
+                   font-size: 21px; margin: 0;">
+          Bridal Elegance
+        </h3>
+      </div>
+    </div>
+
+    <!-- Gallery Item 3 -->
+    <div style="position: relative; overflow: hidden; border-radius: 14px;
+                background: #fff5f1;">
+      <img src="imges/Signature Monograms.jpg"
+           alt="Personalized monogram embroidery"
+           style="width: 100%; height: 300px; object-fit: cover; display: block;">
+
+      <div style="padding: 18px 20px;">
+        <p style="color: #dc4962; font-size: 11px; font-weight: bold;
+                  letter-spacing: 1.5px; margin: 0 0 7px;">
+          PERSONALIZED DESIGN
+        </p>
+        <h3 style="font-family: Georgia, serif; color: #102537;
+                   font-size: 21px; margin: 0;">
+          Signature Monograms
+        </h3>
+      </div>
+    </div>
+
+    <!-- Gallery Item 4 -->
+    <div style="position: relative; overflow: hidden; border-radius: 14px;
+                background: #fff5f1;">
+      <img src="imges/Traditional Threads.jpg"
+           alt="Traditional embroidery project"
+           style="width: 100%; height: 300px; object-fit: cover; display: block;">
+
+      <div style="padding: 18px 20px;">
+        <p style="color: #dc4962; font-size: 11px; font-weight: bold;
+                  letter-spacing: 1.5px; margin: 0 0 7px;">
+          HERITAGE CRAFT
+        </p>
+        <h3 style="font-family: Georgia, serif; color: #102537;
+                   font-size: 21px; margin: 0;">
+          Traditional Threads
+        </h3>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Gallery Button -->
+  <!--<div style="text-align: center; margin-top: 40px;">
+    <a href="gallery.html"
+       style="display: inline-block; background: #dc4962; color: #fff;
+              padding: 15px 32px; border-radius: 30px; text-decoration: none;
+              font-size: 15px; font-weight: bold;">
+      View Full Gallery
+    </a>
+  </div>-->
+
+</section>
+
+<!--ENDING SECTION 5-->
+
+
+<!--SECTION 7-->
+<section style="padding: 75px 6%; background: var(--light); font-family: Arial, sans-serif;">
+
+  <!-- Section Heading -->
+  <div style="text-align: center; max-width: 750px; margin: 0 auto 45px;">
+    <p style="color: #dc4962; font-size: 13px; font-weight: bold;
+              letter-spacing: 3px; margin: 0 0 12px;">
+      WHY STITCHCRAFT
+    </p>
+
+    <h2 style="font-family: Georgia, serif; color: #102537;
+               font-size: clamp(32px, 5vw, 48px); margin: 0 0 15px;">
+      Why Choose <span style="color: #dc4962; font-style: italic;">StitchCraft?</span>
+    </h2>
+
+    <p style="color: #687481; font-size: 16px; line-height: 1.8; margin: 0;">
+      We combine creativity, careful workmanship, and a personal approach
+      to make every embroidery piece feel special.
+    </p>
+  </div>
+
+  <!-- Reasons Grid -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+              gap: 25px; max-width: 1150px; margin: auto;">
+
+    <!-- Reason 1 -->
+    <div style="background: #fff; padding: 30px 25px; border-radius: 14px;
+                border: 1px solid #f0dfe2; box-shadow: 0 8px 24px rgba(16,37,55,0.05);">
+      <div style="width: 60px; height: 60px; display: flex; align-items: center;
+                  justify-content: center; background: #fbe5e9; border-radius: 50%;
+                  font-size: 27px; margin-bottom: 20px;">
+        <img src="imges/nedle.webp" alt="nedle" style="width: 50%;">
+      </div>
+
+      <h3 style="font-family: Georgia, serif; color: #102537;
+                 font-size: 22px; margin: 0 0 12px;">
+        Skilled Craftsmanship
+      </h3>
+
+      <p style="color: #687481; font-size: 14px; line-height: 1.8; margin: 0;">
+        Every design receives careful attention, from the first stitch to the final finish.
+      </p>
+    </div>
+
+    <!-- Reason 2 -->
+    <div style="background: #fff; padding: 30px 25px; border-radius: 14px;
+                border: 1px solid #f0dfe2; box-shadow: 0 8px 24px rgba(16,37,55,0.05);">
+      <div style="width: 60px; height: 60px; display: flex; align-items: center;
+                  justify-content: center; background: #fbe5e9; border-radius: 50%;
+                  font-size: 27px; margin-bottom: 20px;">
+        <img src="imges/color.webp" alt="color" style="width: 50%;">
+      </div>
+
+      <h3 style="font-family: Georgia, serif; color: #102537;
+                 font-size: 22px; margin: 0 0 12px;">
+        Unique Designs
+      </h3>
+
+      <p style="color: #687481; font-size: 14px; line-height: 1.8; margin: 0;">
+        Choose distinctive patterns or request a custom design inspired by your own ideas.
+      </p>
+    </div>
+
+    <!-- Reason 3 -->
+    <div style="background: #fff; padding: 30px 25px; border-radius: 14px;
+                border: 1px solid #f0dfe2; box-shadow: 0 8px 24px rgba(16,37,55,0.05);">
+      <div style="width: 60px; height: 60px; display: flex; align-items: center;
+                  justify-content: center; background: #fbe5e9; border-radius: 50%;
+                  font-size: 27px; margin-bottom: 20px;">
+        <img src="imges/start.avif" alt="start" style="width:50%;">
+      </div>
+
+      <h3 style="font-family: Georgia, serif; color: #102537;
+                 font-size: 22px; margin: 0 0 12px;">
+        Personal Attention
+      </h3>
+
+      <p style="color: #687481; font-size: 14px; line-height: 1.8; margin: 0;">
+        We listen to your preferences and help shape your embroidery idea into a personal creation.
+      </p>
+    </div>
+
+    <!-- Reason 4 -->
+    <div style="background: #fff; padding: 30px 25px; border-radius: 14px;
+                border: 1px solid #f0dfe2; box-shadow: 0 8px 24px rgba(16,37,55,0.05);">
+      <div style="width: 60px; height: 60px; display: flex; align-items: center;
+                  justify-content: center; background: #fbe5e9; border-radius: 50%;
+                  font-size: 27px; margin-bottom: 20px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hearts" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.931.481c1.627-1.671 5.692 1.254 0 5.015-5.692-3.76-1.626-6.686 0-5.015m6.84 1.794c1.084-1.114 3.795.836 0 3.343-3.795-2.507-1.084-4.457 0-3.343M7.84 7.642c2.71-2.786 9.486 2.09 0 8.358-9.487-6.268-2.71-11.144 0-8.358"/>
+</svg>
+      </div>
+
+      <h3 style="font-family: Georgia, serif; color: #102537;
+                 font-size: 22px; margin: 0 0 12px;">
+        Beautiful Finishing
+      </h3>
+
+      <p style="color: #687481; font-size: 14px; line-height: 1.8; margin: 0;">
+        Thoughtful finishing details help each embroidered piece look polished and elegant.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!--ENDING SECTION 7-->
+
+<!--SECTION 6-->
+<section style="padding: 65px 6%; background: var(--white); font-family: Arial, sans-serif;">
+
+  <div style="max-width: 1050px; margin: auto; padding: 50px 30px;
+              text-align: center; border: 1px solid rgba(255,255,255,0.2);
+              border-radius: 18px; background: linear-gradient(135deg, #102537, #19394d);">
+
+    <p style="color: #f28a9b; font-size: 13px; font-weight: bold;
+              letter-spacing: 3px; margin: 0 0 15px;">
+      LET'S CREATE SOMETHING BEAUTIFUL
+    </p>
+
+    <h2 style="font-family: Georgia, serif; color: #fff;
+               font-size: clamp(30px, 5vw, 48px); line-height: 1.2;
+               margin: 0 0 18px;">
+      Have a Design in Mind?
+      <span style="display: block; color: #f28a9b; font-style: italic;">
+        Let's Bring It to Life.
+      </span>
+    </h2>
+
+    <p style="max-width: 650px; margin: 0 auto 30px;
+              color: rgba(255,255,255,0.8); font-size: 16px; line-height: 1.8;">
+      Tell us about your embroidery idea. Whether it's a personalized gift,
+      a special outfit, or a custom business design, we'd love to help you create it.
+    </p>
+
+    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+
+      <a href="contact.html"
+         style="display: inline-block; background: #dc4962; color: #fff;
+                padding: 16px 32px; border-radius: 30px; text-decoration: none;
+                font-size: 15px; font-weight: bold;">
+        Send an Enquiry&nbsp; →
+      </a>
+
+      <a href="mailto:hello@stitchcraft.com"
+         style="display: inline-block; background: transparent; color: #fff;
+                padding: 15px 32px; border: 1px solid rgba(255,255,255,0.5);
+                border-radius: 30px; text-decoration: none;
+                font-size: 15px; font-weight: bold;">
+        Email Us
+      </a>
+
+    </div>
+
+    <p style="color: rgba(255,255,255,0.6); font-size: 13px; margin: 25px 0 0;">
+      Custom designs • Personalised details • Made with care
+    </p>
+
+  </div>
+</section>
+
+<!--ENDING SECTION 6-->
+<footer class="footer" id="contact">
+  <div class="footer-grid">
+    <div id="about">
+      <div class="logo">
+      <img src="imges/Embroidered S-C Needlework Emblem.png" alt="StitchCraft Logo" style="margin-top: -20px;">
+      <div class="brand-text">
+        <a href="#home"><span class="brand-stitch">Stitch </span><span style="color: lightblue;">&amp;</span><span class="brand-craft"> Craft</span></a>
+        <p><span style="color: black;"> choose your own design</span></p>
+      </div>
+    </div>
+      <p><span style="color: black;"> Details. Lasting memories.<br>Personalized with care, one stitch at a time.</span></p>
+      <div class="socials">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.pinterest.com/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="contact.html"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <!--<a href="custom.html">Custom Design</a>
+      <a href="bulk.html">Bulk Orders</a>-->
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      <h3>Customer Support</h3>
+      <a href="contact.html">FAQs</a>
+      <a href="contact.html">Shipping &amp; Delivery</a>
+      <a href="contact.html">Returns &amp; Exchanges</a>
+      <a href="contact.html">Care Instructions</a>
+      <a href="contact.html">Privacy Policy</a>
+    </div>
+
+    <div>
+      <h3>Contact Us</h3>
+      <a href="mailto:info@stitchcraft.com"> info@stitchcraft.com</a>
+      <a href="tel:+91 0000000000"> +91 0000000000</a>
+      <p><span style="color: black;">Monday - Friday: 9:00 AM - 6:00 PM</span></p>
+      <p><span style="color: black;"> B.Kothakota,Near Madanapalli,Annamayya(D)</span></p>
+
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>© 2026 StitchCraft. All rights reserved.</p>
+    <p>Terms and Conditions</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

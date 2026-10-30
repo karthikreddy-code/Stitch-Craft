@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | StitchCraft</title>
+  <link rel="icon" href="imges/Embroidered S-C Needlework Emblem.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+<header class="header">
+  <div class="logo">
+    <img src="imges/Embroidered S-C Needlework Emblem.png" alt="StitchCraft Logo">
+    <div class="brand-text">
+      <a href="index.html"><span class="brand-stitch">Stitch </span><span style="color: lightblue;">&amp;</span><span class="brand-craft"> Craft</span></a>
+      <p>choose your own design</p>
+    </div>
+  </div>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation"><span></span><span></span><span></span></label>
+  <div class="navbar">
+    <nav>
+      <div class="dropdown" id="homeDropdown">
+        <a href="index.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Home <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="index.html" class="active">Home – Premium</a>
+          <a href="eindex.html">Home – Elite</a>
+        </div>
+      </div>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <!--<a href="custom.html">Custom Design</a>
+      <a href="bulk.html">Bulk Orders</a>-->
+      <a href="blog.html" class="current nav-link active">Blog</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="display-options">
+      <button type="button" id="rtlMode" class="display-btn" aria-label="Toggle text direction" title="Switch to RTL">RTL</button>
+      <button type="button" id="themeMode" class="display-btn" aria-label="Switch to dark mode" title="Dark mode"><i class="fa-solid fa-moon"></i></button>
+    </div>
+    <div class="nav-actions"><a href="custom.html" class="btn">Get a Quote</a></div>
+  </div>
+</header>
+<!--SECTION 1-->
+<section id="stitchcraft-hero" style="
+  position:relative;
+  height:100vh;
+  margin:21px 15px 0;
+  padding:45px 6% 35px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  background:
+    linear-gradient(rgba(10,20,28,.68), rgba(10,20,28,.78)),
+    url('imges/embroidery-hero.webp') center/cover no-repeat;
+">
+
+  <div style="position:relative; z-index:1; width:100%; max-width:950px;">
+
+    <!-- Premium badge -->
+    <div style="
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:13px 25px;
+      margin-bottom: -35px;
+      margin-top: 400px;
+      border:1px solid rgba(255,255,255,.45);
+      border-radius:40px;
+      background:rgba(255,255,255,.12);
+      color:#fff;
+      font-size:15px;
+      font-weight:700;
+      letter-spacing:1.2px;
+    ">
+     PREMIUM CUSTOM EMBROIDERY
+    </div>
+
+    <!-- Main headline -->
+    <h1 style="
+      margin:0;
+      color:#fff;
+      font-family:Georgia,'Times New Roman',serif;
+      font-size:clamp(48px,8vw,104px);
+      font-weight:700;
+      line-height:1.02;
+      letter-spacing:-2px;
+    ">
+      Every Stitch
+      <span style="
+        display:block;
+        color:var(--pink);
+        font-style:italic;
+      ">
+        Tells Your Story
+      </span>
+    </h1>
+
+    <!-- Description -->
+    <p style="
+      max-width:830px;
+      margin:35px auto 30px;
+      color:#f5f5f5;
+      font-size:clamp(16px,2vw,22px);
+      line-height:1.85;
+    ">
+      Transform your clothing and accessories with beautiful custom embroidery.
+      From personalized designs to elegant details, we bring your ideas to life
+      with care and craftsmanship.
+    </p>
+
+    <!-- Buttons -->
+    <div style="
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:18px;
+      margin-bottom:65px;
+    ">
+      <a href="products.html" style="
+        display:inline-block;
+        min-width:205px;
+        padding:21px 30px;
+        background:var(--pink);
+        color:#fff;
+        border:1px solid var(--pink);
+        border-radius:45px;
+        text-decoration:none;
+        font-size:17px;
+        font-weight:700;
+      ">
+        Explore Collection
+      </a>
+
+      <a href="contact.html" style="
+        display:inline-block;
+        min-width:150px;
+        padding:21px 30px;
+        background:rgba(0,0,0,.12);
+        color:#fff;
+        border:1px solid rgba(255,255,255,.65);
+        border-radius:45px;
+        text-decoration:none;
+        font-size:17px;
+        font-weight:700;
+      ">
+        Get a Quote
+      </a>
+    </div>
+
+    <!-- Stats divider -->
+    <div style="
+      max-width:850px;
+      height:1px;
+      margin:0 auto 35px;
+      background:rgba(255,255,255,.35);
+    "></div>
+
+    <!-- Stats -->
+    <div style="
+      max-width:750px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:20px;
+    ">
+
+      <div style="margin-bottom: 190px;">
+        <strong style="
+          display:block;
+          color:var(--pink);
+          font-size:clamp(30px,4vw,46px);
+          line-height:1.2;
+        ">500+</strong>
+        <span style="display:block; margin-top:12px; color:#fff; font-size:16px;">
+          Custom Designs
+        </span>
+      </div>
+
+      <div>
+        <strong style="
+          display:block;
+          color:var(--pink);
+          font-size:clamp(30px,4vw,46px);
+          line-height:1.2;
+        ">100%</strong>
+        <span style="display:block; margin-top:12px; color:#fff; font-size:16px;">
+          Made with Care
+        </span>
+      </div>
+
+      <div>
+        <strong style="
+          display:block;
+          color:var(--pink);
+          font-size:clamp(30px,4vw,46px);
+          line-height:1.2;
+        ">&</strong>
+        <span style="display:block; margin-top:12px; color:#fff; font-size:16px;">
+          Unique Details
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!--ENDING SECTION 1-->
+
+<!--SECTION 2-->
+<section id="featured-article" style="padding:70px 6%; background:var(--white); color:var(--text);">
+  <div style="max-width:1200px; margin:0 auto;">
+
+    <!-- Section heading -->
+    <div style="text-align:center; margin-bottom:38px;">
+      <p style="margin:0 0 10px; color:var(--pink); font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase;">
+        From the StitchCraft Journal
+      </p>
+      <h2 style="margin:0; color:var(--text); font-size:clamp(28px,4vw,42px);">
+        Featured Article
+      </h2>
+    </div>
+
+    <!-- Featured article card -->
+    <article style="
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));
+      background:var(--light);
+      border:1px solid var(--border);
+      border-radius:24px;
+      overflow:hidden;
+    ">
+
+      <!-- Article image -->
+      <div style="height:480px;">
+        <img
+          src="imges/Close-up of decorative embroidery and colorful thread.jpg"
+          alt="Close-up of decorative embroidery and colorful thread"
+          style="width:100%; height:100%; min-height:320px; object-fit:cover; display:block;"
+        >
+      </div>
+
+      <!-- Article details -->
+      <div style="padding:clamp(25px,4vw,45px); display:flex; flex-direction:column; justify-content:center; align-items:flex-start;">
+
+        <span style="
+          display:inline-block;
+          padding:7px 13px;
+          margin-bottom:18px;
+          background:var(--light);
+          color:var(--pink);
+          border-radius:30px;
+          font-size:12px;
+          font-weight:700;
+          letter-spacing:1px;
+          text-transform:uppercase;
+        ">
+          Embroidery Tips
+        </span>
+
+        <p style="margin:0 0 12px; color:var(--muted); font-size:14px;">
+          Featured Read&nbsp; · &nbsp;5 min read
+        </p>
+
+        <h3 style="margin:0 0 16px; color:var(--text); font-size:clamp(24px,3vw,34px); line-height:1.25;">
+          The Art of Embroidery: Adding a Personal Touch to Everyday Style
+        </h3>
+
+        <p style="margin:0 0 25px; color:var(--muted); font-size:16px; line-height:1.8;">
+          Discover how thoughtful embroidery details can transform clothing,
+          accessories, and meaningful gifts into pieces that express your
+          personality and creativity.
+        </p>
+
+        <a href="blog-article.html" style="
+          display:inline-block;
+          padding:13px 25px;
+          background:var(--pink);
+          color:#fff;
+          border:1px solid var(--pink);
+          border-radius:30px;
+          text-decoration:none;
+          font-weight:700;
+        ">
+          Read Full Article →
+        </a>
+
+      </div>
+    </article>
+
+  </div>
+</section>
+<!--ENDING SECTION 2-->
+
+<!--section 3-->
+<section id="latest-articles" style="padding:70px 6%; background:var(--light); color:var(--text);">
+  <div style="max-width:1200px; margin:0 auto;">
+
+    <!-- Section heading -->
+    <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:end; gap:20px; margin-bottom:35px;">
+      <div>
+        <p style="margin:0 0 10px; color:var(--pink); font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase;">
+          StitchCraft Journal
+        </p>
+        <h2 style="margin:0 0 10px; color:var(--text); font-size:clamp(28px,4vw,42px);">
+          Latest Articles
+        </h2>
+        <p style="margin:0; max-width:600px; color:var(--muted); line-height:1.7;">
+          Fresh inspiration, embroidery tips, and creative ideas from our studio.
+        </p>
+      </div>
+
+      <a href="blog.html" style="color:var(--pink); text-decoration:none; font-weight:700;">
+        View All Articles →
+      </a>
+    </div>
+
+    <!-- Article cards -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:22px;">
+
+      <!-- Article 1 -->
+      <article style="background:var(--card); border:1px solid var(--border); border-radius:18px; overflow:hidden;">
+        <img src="imges/Embroidery Basics A Beginner’s Guide.jpg" alt="Embroidery basics with thread and fabric" style="display:block; width:100%; height:220px; object-fit:cover;">
+        <div style="padding:22px;">
+          <p style="margin:0 0 10px; color:var(--muted); font-size:13px;">Embroidery Tips · 5 min read</p>
+          <h3 style="margin:0 0 12px; color:var(--text); font-size:21px; line-height:1.35;">
+            Embroidery Basics: A Beginner’s Guide
+          </h3>
+          <p style="margin:0 0 18px; color:var(--muted); line-height:1.7;">
+            Get familiar with embroidery materials, simple stitches, and the essentials for starting your first project.
+          </p>
+          <a href="blog-artical1.html" style="color:var(--pink); text-decoration:none; font-weight:700;">
+            Read Article →
+          </a>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article style="background:var(--card); border:1px solid var(--border); border-radius:18px; overflow:hidden;">
+        <img src="imges/Choosing Thread Colors That Complement Your Fabric.jpg" alt="Colorful embroidery threads arranged together" style="display:block; width:100%; height:220px; object-fit:cover;">
+        <div style="padding:22px;">
+          <p style="margin:0 0 10px; color:var(--muted); font-size:13px;">Design Inspiration · 4 min read</p>
+          <h3 style="margin:0 0 12px; color:var(--text); font-size:21px; line-height:1.35;">
+            Choosing Thread Colors That Complement Your Fabric
+          </h3>
+          <p style="margin:0 0 18px; color:var(--muted); line-height:1.7;">
+            Explore color combinations that help embroidery stand out while complementing your garment or accessory.
+          </p>
+          <a href="blog-artical2.html" style="color:var(--pink); text-decoration:none; font-weight:700;">
+            Read Article →
+          </a>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article style="background:var(--card); border:1px solid var(--border); border-radius:18px; overflow:hidden;">
+        <img src="imges/Personalized embroidered gifts.webp" alt="Personalized embroidered gift" style="display:block; width:100%; height:220px; object-fit:cover;">
+        <div style="padding:22px;">
+          <p style="margin:0 0 10px; color:var(--muted); font-size:13px;">Gift Ideas · 6 min read</p>
+          <h3 style="margin:0 0 12px; color:var(--text); font-size:21px; line-height:1.35;">
+            Personalized Embroidery Gifts for Special Moments
+          </h3>
+          <p style="margin:0 0 18px; color:var(--muted); line-height:1.7;">
+            Find thoughtful ways to add names, initials, and meaningful details to gifts for the people you care about.
+          </p>
+          <a href="blog-artical3.html" style="color:var(--pink); text-decoration:none; font-weight:700;">
+            Read Article →
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!--ending section 3-->
+
+<!--section 4-->
+<section id="blog-categories" style="padding:65px 6%; background:var(--white); color:var(--text);">
+  <div style="max-width:1200px; margin:0 auto;">
+
+    <!-- Heading -->
+    <div style="text-align:center; margin-bottom:35px;">
+      <p style="margin:0 0 10px; color:var(--pink); font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase;">
+        Browse the Journal
+      </p>
+      <h2 style="margin:0 0 12px; color:var(--text); font-size:clamp(28px,4vw,42px);">
+        Explore Categories
+      </h2>
+      <p style="max-width:620px; margin:0 auto; color:var(--muted); line-height:1.7;">
+        Find inspiration, practical advice, and fresh ideas for your embroidery projects.
+      </p>
+    </div>
+
+    <!-- Category cards -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:18px;">
+
+      <a href="blog.html?category=embroidery-tips" style="text-decoration:none; color:inherit;">
+        <article style="height:100%; padding:25px; background:var(--light); border:1px solid var(--border); border-radius:18px;">
+          <div style="width:50px; height:50px; display:flex; align-items:center; justify-content:center; margin-bottom:18px; border-radius:14px; background:var(--light); color:var(--pink); font-size:25px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+  <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+</svg>
+          </div>
+          <h3 style="margin:0 0 9px; color:var(--text); font-size:20px;">Embroidery Tips</h3>
+          <p style="margin:0 0 15px; color:var(--muted); line-height:1.65;">
+            Learn stitching techniques, tools, and helpful ways to improve your craft.
+          </p>
+          <span style="color:var(--pink); font-weight:700;">Explore Articles →</span>
+        </article>
+      </a>
+
+      <a href="blog.html?category=design-inspiration" style="text-decoration:none; color:inherit;">
+        <article style="height:100%; padding:25px; background:var(--light); border:1px solid var(--border); border-radius:18px;">
+          <div style="width:50px; height:50px; display:flex; align-items:center; justify-content:center; margin-bottom:18px; border-radius:14px; background:var(--light); color:var(--pink); font-size:25px;">
+            <img src="imges/folwer.png" alt="folwer" style="width: 80%;">
+          </div>
+          <h3 style="margin:0 0 9px; color:var(--text); font-size:20px;">Design Inspiration</h3>
+          <p style="margin:0 0 15px; color:var(--muted); line-height:1.65;">
+            Discover patterns, color combinations, and creative embroidery ideas.
+          </p>
+          <span style="color:var(--pink); font-weight:700;">Explore Articles →</span>
+        </article>
+      </a>
+
+      <a href="blog.html?category=personalized-gifts" style="text-decoration:none; color:inherit;">
+        <article style="height:100%; padding:25px; background:var(--light); border:1px solid var(--border); border-radius:18px;">
+          <div style="width:50px; height:50px; display:flex; align-items:center; justify-content:center; margin-bottom:18px; border-radius:14px; background:var(--light); color:var(--pink); font-size:25px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hearts" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.931.481c1.627-1.671 5.692 1.254 0 5.015-5.692-3.76-1.626-6.686 0-5.015m6.84 1.794c1.084-1.114 3.795.836 0 3.343-3.795-2.507-1.084-4.457 0-3.343M7.84 7.642c2.71-2.786 9.486 2.09 0 8.358-9.487-6.268-2.71-11.144 0-8.358"/>
+</svg>
+          </div>
+          <h3 style="margin:0 0 9px; color:var(--text); font-size:20px;">Personalized Gifts</h3>
+          <p style="margin:0 0 15px; color:var(--muted); line-height:1.65;">
+            Get ideas for meaningful gifts with names, initials, and custom details.
+          </p>
+          <span style="color:var(--pink); font-weight:700;">Explore Articles →</span>
+        </article>
+      </a>
+
+      <a href="blog.html?category=care-and-maintenance" style="text-decoration:none; color:inherit;">
+        <article style="height:100%; padding:25px; background:var(--light); border:1px solid var(--border); border-radius:18px;">
+          <div style="width:50px; height:50px; display:flex; align-items:center; justify-content:center; margin-bottom:18px; border-radius:14px; background:var(--light); color:var(--pink); font-size:25px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun" viewBox="0 0 16 16">
+  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+</svg>
+          </div>
+          <h3 style="margin:0 0 9px; color:var(--text); font-size:20px;">Care & Maintenance</h3>
+          <p style="margin:0 0 15px; color:var(--muted); line-height:1.65;">
+            Find tips for washing, storing, and preserving embroidered pieces.
+          </p>
+          <span style="color:var(--pink); font-weight:700;">Explore Articles →</span>
+        </article>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!--ending section 4-->
+
+<!--senction 5-->
+<section id="embroidery-tips" style="padding:10px 2%; background:var(--light); color:var(--text);">
+  <div style="max-width:1200px; margin:0 auto;">
+
+    <!-- Heading -->
+    <div style="text-align:center; margin-bottom:40px;">
+      <p style="margin:0 0 10px; color:var(--pink); font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase;">
+        Learn the Craft
+      </p>
+      <h2 style="margin:0 0 12px; color:var(--text); font-size:clamp(28px,4vw,42px);">
+        Embroidery Tips
+      </h2>
+      <p style="max-width:650px; margin:0 auto; color:var(--muted); line-height:1.7;">
+        Helpful ideas for creating neat stitches, choosing materials, and caring for your embroidered work.
+      </p>
+    </div>
+
+    <!-- Tips grid -->
+    <div style="display:grid; grid-template-columns:repeat(3,minmax(230px,1fr)); gap:22px;">
+
+      <!-- Tip 1 -->
+      <article style="padding:26px; background:var(--card); border:1px solid var(--border); border-radius:18px;">
+        <div style="font-size:28px; margin-bottom:16px;"><img src="imges/thread.webp" alt="thread" style="width: 10%;"></div>
+        <h3 style="margin:0 0 10px; color:var(--text); font-size:20px;">Choose the Right Thread</h3>
+        <p style="margin:0; color:var(--muted); line-height:1.7;">
+          Select thread suited to your fabric and project. Keep strands smooth and avoid tangles while stitching.
+        </p>
+      </article>
+
+      <!-- Tip 2 -->
+      <article style="padding:26px; background:var(--card); border:1px solid var(--border); border-radius:18px;">
+        <div style="font-size:28px; margin-bottom:16px;">O</div>
+        <h3 style="margin:0 0 10px; color:var(--text); font-size:20px;">Keep Fabric Taut</h3>
+        <p style="margin:0; color:var(--muted); line-height:1.7;">
+          Use an embroidery hoop to hold the fabric evenly—not overly tight—so stitches are easier to control.
+        </p>
+      </article>
+
+      <!-- Tip 3 -->
+      <article style="padding:26px; background:var(--card); border:1px solid var(--border); border-radius:18px;">
+        <div style="font-size:28px; margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-scissors" viewBox="0 0 16 16">
+  <path d="M3.5 3.5c-.614-.884-.074-1.962.858-2.5L8 7.226 11.642 1c.932.538 1.472 1.616.858 2.5L8.81 8.61l1.556 2.661a2.5 2.5 0 1 1-.794.637L8 9.73l-1.572 2.177a2.5 2.5 0 1 1-.794-.637L7.19 8.61zm2.5 10a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0m7 0a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"/>
+</svg></div>
+        <h3 style="margin:0 0 10px; color:var(--text); font-size:20px;">Prepare Your Design</h3>
+        <p style="margin:0; color:var(--muted); line-height:1.7;">
+          Mark or transfer your pattern carefully, and test the method on a fabric scrap first and Having a Good Qulaty.
+        </p>
+      </article>
+
+      <!-- Tip 4 -->
+      <article style="padding:26px; background:var(--card); border:1px solid var(--border); border-radius:18px;">
+        <div style="font-size:28px; margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-flower1" viewBox="0 0 16 16">
+  <path d="M6.174 1.184a2 2 0 0 1 3.652 0A2 2 0 0 1 12.99 3.01a2 2 0 0 1 1.826 3.164 2 2 0 0 1 0 3.652 2 2 0 0 1-1.826 3.164 2 2 0 0 1-3.164 1.826 2 2 0 0 1-3.652 0A2 2 0 0 1 3.01 12.99a2 2 0 0 1-1.826-3.164 2 2 0 0 1 0-3.652A2 2 0 0 1 3.01 3.01a2 2 0 0 1 3.164-1.826M8 1a1 1 0 0 0-.998 1.03l.01.091q.017.116.054.296c.049.241.122.542.213.887.182.688.428 1.513.676 2.314L8 5.762l.045-.144c.248-.8.494-1.626.676-2.314.091-.345.164-.646.213-.887a5 5 0 0 0 .064-.386L9 2a1 1 0 0 0-1-1M2 9l.03-.002.091-.01a5 5 0 0 0 .296-.054c.241-.049.542-.122.887-.213a61 61 0 0 0 2.314-.676L5.762 8l-.144-.045a61 61 0 0 0-2.314-.676 17 17 0 0 0-.887-.213 5 5 0 0 0-.386-.064L2 7a1 1 0 1 0 0 2m7 5-.002-.03a5 5 0 0 0-.064-.386 16 16 0 0 0-.213-.888 61 61 0 0 0-.676-2.314L8 10.238l-.045.144c-.248.8-.494 1.626-.676 2.314-.091.345-.164.646-.213.887a5 5 0 0 0-.064.386L7 14a1 1 0 1 0 2 0m-5.696-2.134.025-.017a5 5 0 0 0 .303-.248c.184-.164.408-.377.661-.629A61 61 0 0 0 5.96 9.23l.103-.111-.147.033a61 61 0 0 0-2.343.572c-.344.093-.64.18-.874.258a5 5 0 0 0-.367.138l-.027.014a1 1 0 1 0 1 1.732zM4.5 14.062a1 1 0 0 0 1.366-.366l.014-.027q.014-.03.036-.084a5 5 0 0 0 .102-.283c.078-.233.165-.53.258-.874a61 61 0 0 0 .572-2.343l.033-.147-.11.102a61 61 0 0 0-1.743 1.667 17 17 0 0 0-.629.66 5 5 0 0 0-.248.304l-.017.025a1 1 0 0 0 .366 1.366m9.196-8.196a1 1 0 0 0-1-1.732l-.025.017a5 5 0 0 0-.303.248 17 17 0 0 0-.661.629A61 61 0 0 0 10.04 6.77l-.102.111.147-.033a61 61 0 0 0 2.342-.572c.345-.093.642-.18.875-.258a5 5 0 0 0 .367-.138zM11.5 1.938a1 1 0 0 0-1.366.366l-.014.027q-.014.03-.036.084a5 5 0 0 0-.102.283c-.078.233-.165.53-.258.875a61 61 0 0 0-.572 2.342l-.033.147.11-.102a61 61 0 0 0 1.743-1.667c.252-.253.465-.477.629-.66a5 5 0 0 0 .248-.304l.017-.025a1 1 0 0 0-.366-1.366M14 9a1 1 0 0 0 0-2l-.03.002a5 5 0 0 0-.386.064c-.242.049-.543.122-.888.213-.688.182-1.513.428-2.314.676L10.238 8l.144.045c.8.248 1.626.494 2.314.676.345.091.646.164.887.213a5 5 0 0 0 .386.064zM1.938 4.5a1 1 0 0 0 .393 1.38l.084.035q.108.045.283.103c.233.078.53.165.874.258a61 61 0 0 0 2.343.572l.147.033-.103-.111a61 61 0 0 0-1.666-1.742 17 17 0 0 0-.66-.629 5 5 0 0 0-.304-.248l-.025-.017a1 1 0 0 0-1.366.366m2.196-1.196.017.025a5 5 0 0 0 .248.303c.164.184.377.408.629.661A61 61 0 0 0 6.77 5.96l.111.102-.033-.147a61 61 0 0 0-.572-2.342c-.093-.345-.18-.642-.258-.875a5 5 0 0 0-.138-.367l-.014-.027a1 1 0 1 0-1.732 1m9.928 8.196a1 1 0 0 0-.366-1.366l-.027-.014a5 5 0 0 0-.367-.138c-.233-.078-.53-.165-.875-.258a61 61 0 0 0-2.342-.572l-.147-.033.102.111a61 61 0 0 0 1.667 1.742c.253.252.477.465.66.629a5 5 0 0 0 .304.248l.025.017a1 1 0 0 0 1.366-.366m-3.928 2.196a1 1 0 0 0 1.732-1l-.017-.025a5 5 0 0 0-.248-.303 17 17 0 0 0-.629-.661A61 61 0 0 0 9.23 10.04l-.111-.102.033.147a61 61 0 0 0 .572 2.342c.093.345.18.642.258.875a5 5 0 0 0 .138.367zM8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
+</svg></div>
+        <h3 style="margin:0 0 10px; color:var(--text); font-size:20px;">Practice Stitch Consistency</h3>
+        <p style="margin:0; color:var(--muted); line-height:1.7;">
+          Try a few practice stitches before starting. Aim for even spacing and steady thread tension and Having a Good Qulaty.
+        </p>
+      </article>
+
+      <!-- Tip 5 -->
+      <article style="padding:26px; background:var(--card); border:1px solid var(--border); border-radius:18px;">
+        <div style="font-size:28px; margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-diamond-fill" viewBox="0 0 16 16">
+  <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L4.047 3.339 8 7.293l3.954-3.954L9.049.435zm3.61 3.611L8.708 8l3.954 3.954 2.904-2.905c.58-.58.58-1.519 0-2.098l-2.904-2.905zm-.706 8.614L8 8.708l-3.954 3.954 2.905 2.904c.58.58 1.519.58 2.098 0l2.905-2.904zm-8.614-.706L7.292 8 3.339 4.046.435 6.951c-.58.58-.58 1.519 0 2.098z"/>
+</svg></div>
+        <h3 style="margin:0 0 10px; color:var(--text); font-size:20px;">Plan Your Color Palette</h3>
+        <p style="margin:0; color:var(--muted); line-height:1.7;">
+          Arrange thread colors together before stitching to see how they complement your fabric and Having a Good Qulaty.
+        </p>
+      </article>
+
+      <!-- Tip 6 -->
+      <article style="padding:26px; background:var(--card); border:1px solid var(--border); border-radius:18px;">
+        <div style="font-size:28px; margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-feather2" viewBox="0 0 16 16">
+  <path d="M7.5 1.063v9.556L6 8.819V3a2 2 0 0 1 1.5-1.937M8 0a3 3 0 0 0-3 3v6a.5.5 0 0 0 .116.32L7.5 12.181V15.5a.5.5 0 0 0 1 0v-3.319l2.384-2.86A.5.5 0 0 0 11 9V3a3 3 0 0 0-3-3m.5 1.063A2 2 0 0 1 10 3v.293l-1.5 1.5zM10 4.707V8.82l-1.5 1.8V6.207z"/>
+</svg></div>
+        <h3 style="margin:0 0 10px; color:var(--text); font-size:20px;">Finish and Store with Care</h3>
+        <p style="margin:0; color:var(--muted); line-height:1.7;">
+          Secure loose ends neatly and follow the fabric’s care instructions to help preserve your finished piece.
+        </p>
+      </article>
+
+    </div>
+
+    <!-- CTA -->
+    <div style="margin-top:30px; text-align:center;">
+      <a href="blog.html?category=embroidery-tips" style="display:inline-block; padding:14px 28px; background:var(--pink); color:#fff; border-radius:30px; text-decoration:none; font-weight:700;">
+        Read More Embroidery Tips →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!--ending section 5-->
+<!--section 6-->
+<main class="page-main">
+<section class="page-hero">
+  <h1>Our Blog</h1>
+  <div class="underline"></div>
+  <p>Tips, ideas and stories from the StitchCraft studio.</p>
+</section>
+<section class="section">
+  <div class="blog-grid">
+    <article class="blog-card">
+      <img src="imges/Apparel.jpg" alt="How to Wash Embroidered Clothes">
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-cat">Care Tips</span><span>12 Oct 2026</span></div>
+        <h3>How to Wash Embroidered Clothes</h3>
+        <p>Turn the garment inside out, use cold water and a gentle cycle.</p>
+        <details>
+          <summary>Read more</summary>
+          <p>Wash embroidered clothes inside out in cold water on a gentle cycle. Avoid harsh bleach, and never wring the design. Dry in shade and iron from the reverse side with a thin cloth over the stitches.</p>
+        </details>
+      </div>
+    </article>
+    <article class="blog-card">
+      <img src="imges/heroimage1.jpg" alt="Best Design Files for Embroidery">
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-cat">Guides</span><span>05 Oct 2026</span></div>
+        <h3>Best Design Files for Embroidery</h3>
+        <p>PNG or vector files with clear edges give the best stitch quality.</p>
+        <details>
+          <summary>Read more</summary>
+          <p>Simple logos with bold shapes and few colours stitch best. Send a PNG or vector (SVG/PDF) at high resolution. Very thin lines and tiny text under 5 mm may not stitch cleanly, so keep details a little larger.</p>
+        </details>
+      </div>
+    </article>
+    <article class="blog-card">
+      <img src="imges/Towels.jpg" alt="Monogrammed Towels: A Gift That Lasts">
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-cat">Gifting</span><span>28 Sep 2026</span></div>
+        <h3>Monogrammed Towels: A Gift That Lasts</h3>
+        <p>Initials on a soft towel set make a thoughtful wedding or housewarming gift.</p>
+        <details>
+          <summary>Read more</summary>
+          <p>A monogrammed towel set is personal, useful and long-lasting. Pick two or three initials in a classic script, match thread to the towel colour, and place the monogram on the lower third of the towel for a neat finish.</p>
+        </details>
+      </div>
+    </article>
+    <article class="blog-card">
+      <img src="imges/heroimage.webp" alt="Team Uniforms with Your Logo">
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-cat">Business</span><span>20 Sep 2026</span></div>
+        <h3>Team Uniforms with Your Logo</h3>
+        <p>Why embroidered logos look more professional than prints.</p>
+        <details>
+          <summary>Read more</summary>
+          <p>Embroidery does not fade or peel like some prints, so uniforms keep their look wash after wash. For 25+ pieces we offer bulk pricing, and we always share a sample for approval before full production.</p>
+        </details>
+      </div>
+    </article>
+    <article class="blog-card">
+      <img src="imges/home linens.jpg" alt="Refresh Your Home with Embroidered Cushions">
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-cat">Home</span><span>12 Sep 2026</span></div>
+        <h3>Refresh Your Home with Embroidered Cushions</h3>
+        <p>Small touches like cushion covers and table runners change a room.</p>
+        <details>
+          <summary>Read more</summary>
+          <p>Embroidered cushion covers and table runners add colour and texture without a full makeover. Choose a motif that repeats across pieces so the room feels connected, and keep colours within two or three shades.</p>
+        </details>
+      </div>
+    </article>
+    <article class="blog-card">
+      <img src="imges/Bags.webp" alt="Personalised Bags: Totes to Backpacks">
+      <div class="blog-body">
+        <div class="blog-meta"><span class="blog-cat">Guides</span><span>03 Sep 2026</span></div>
+        <h3>Personalised Bags: Totes to Backpacks</h3>
+        <p>Name or initials on a bag stops mix-ups at school, college and work.</p>
+        <details>
+          <summary>Read more</summary>
+          <p>Tote bags and backpacks take embroidery well on the front panel. Short names or initials work best. Tell us the placement and size when you place your order, and we will confirm before stitching.</p>
+        </details>
+      </div>
+    </article>
+  </div>
+</section>
+<section class="bulk">
+  <div><h2>Have a design in mind?</h2><p>Let us bring it to life.</p></div>
+  <a href="custom.html" class="btn">Upload Your Design →</a>
+</section>
+</main>
+<!--section ending 6-->
+
+<!--section 7-->
+<section id="newsletter" style="
+  padding: 60px 20px;
+  background: var(--white);
+  color: var(--text);
+">
+  <div style="
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 42px 24px;
+    text-align: center;
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  ">
+    <span style="
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 7px 13px;
+      border-radius: 30px;
+      background: var(--light);
+      color: var(--pink);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    ">STITCHCRAFT NEWSLETTER</span>
+
+    <h2 style="
+      margin: 0 0 14px;
+      color: var(--text);
+      font-family: Georgia, serif;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.2;
+    ">
+      A Little Stitch of Inspiration
+    </h2>
+
+    <p style="
+      max-width: 570px;
+      margin: 0 auto 26px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+    ">
+      Sign up for fresh embroidery ideas, new designs, creative tips,
+      and special offers—delivered straight to your inbox.
+    </p>
+
+    <form action="#" method="post" style="
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      max-width: 560px;
+      margin: 0 auto;
+    ">
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email address"
+        aria-label="Email address"
+        required
+        style="
+          flex: 1 1 250px;
+          min-width: 0;
+          padding: 15px 17px;
+          border: 1px solid var(--border);
+          border-radius: 10px;
+          background: var(--page);
+          color: var(--text);
+          font: inherit;
+          outline-color: var(--pink);
+        "
+      >
+
+      <button type="submit" style="
+        padding: 15px 23px;
+        border: none;
+        border-radius: 10px;
+        background: var(--pink);
+        color: #fff;
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+      ">
+        Subscribe
+      </button>
+    </form>
+
+    <p style="
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 12px;
+    ">
+      No spam—just beautiful embroidery inspiration. Unsubscribe anytime.
+    </p>
+  </div>
+</section>
+<!--ending section 7-->
+<footer class="footer" id="contact">
+  <div class="footer-grid">
+    <div id="about">
+      <div class="logo">
+      <img src="imges/Embroidered S-C Needlework Emblem.png" alt="StitchCraft Logo" style="margin-top: -20px;">
+      <div class="brand-text">
+        <a href="#home"><span class="brand-stitch">Stitch </span><span style="color: lightblue;">&amp;</span><span class="brand-craft"> Craft</span></a>
+        <p><span style="color: black;"> choose your own design</span></p>
+      </div>
+    </div>
+      <p><span style="color: black;"> Details. Lasting memories.<br>Personalized with care, one stitch at a time.</span></p>
+      <div class="socials">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.pinterest.com/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="contact.html"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <!--<a href="custom.html">Custom Design</a>
+      <a href="bulk.html">Bulk Orders</a>-->
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      <h3>Customer Support</h3>
+      <a href="contact.html">FAQs</a>
+      <a href="contact.html">Shipping &amp; Delivery</a>
+      <a href="contact.html">Returns &amp; Exchanges</a>
+      <a href="contact.html">Care Instructions</a>
+      <a href="contact.html">Privacy Policy</a>
+    </div>
+
+    <div>
+      <h3>Contact Us</h3>
+      <a href="mailto:info@stitchcraft.com"> info@stitchcraft.com</a>
+      <a href="tel:+91 0000000000"> +91 0000000000</a>
+      <p><span style="color: black;">Monday - Friday: 9:00 AM - 6:00 PM</span></p>
+      <p><span style="color: black;"> B.Kothakota,Near Madanapalli,Annamayya(D)</span></p>
+
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>© 2026 StitchCraft. All rights reserved.</p>
+    <p>Terms and Conditions</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

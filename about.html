@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | StitchCraft</title>
+  <link rel="icon" href="imges/Embroidered S-C Needlework Emblem.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+<header class="header">
+  <div class="logo">
+    <img src="imges/Embroidered S-C Needlework Emblem.png" alt="StitchCraft Logo">
+    <div class="brand-text">
+      <a href="index.html"><span class="brand-stitch">Stitch </span><span style="color: lightblue;">&amp;</span><span class="brand-craft"> Craft</span></a>
+      <p>choose your own design</p>
+    </div>
+  </div>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation"><span></span><span></span><span></span></label>
+  <div class="navbar">
+    <nav>
+      <div class="dropdown" id="homeDropdown">
+        <a href="index.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Home <i class="fa-solid fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="index.html" class="active">Home – Premium</a>
+          <a href="eindex.html">Home – Elite</a>
+        </div>
+      </div>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <!--<a href="custom.html">Custom Design</a>
+      <a href="bulk.html">Bulk Orders</a>-->
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="about.html" class="current nav-link active">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="display-options">
+      <button type="button" id="rtlMode" class="display-btn" aria-label="Toggle text direction" title="Switch to RTL">RTL</button>
+      <button type="button" id="themeMode" class="display-btn" aria-label="Switch to dark mode" title="Dark mode"><i class="fa-solid fa-moon"></i></button>
+    </div>
+    <div class="nav-actions"><a href="custom.html" class="btn">Get a Quote</a></div>
+  </div>
+</header>
+<!--section 1-->
+<section id="about-hero" style="
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 90px 6%;
+  background: var(--light);
+  color: var(--text);
+">
+  <div style="
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    align-items: center;
+    gap: 45px;
+  ">
+
+    <!-- Hero text -->
+    <div>
+      <span style="
+        display: inline-block;
+        margin-bottom: 18px;
+        padding: 8px 14px;
+        border-radius: 30px;
+        background: var(--light);
+        color: var(--pink);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+      ">
+        THE STORY OF STITCHCRAFT
+      </span>
+
+      <h1 style="
+        margin: 0 0 22px;
+        font-family: Georgia, serif;
+        font-size: clamp(36px, 5vw, 62px);
+        line-height: 1.12;
+        color: var(--text);
+      ">
+        Crafted with Care,<br>
+        <span style="color: var(--pink); font-style: italic;">
+          Stitched with Heart
+        </span>
+      </h1>
+
+      <p style="
+        max-width: 520px;
+        margin: 0 0 28px;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.8;
+      ">
+        Every stitch tells a story. At StitchCraft, we combine creativity
+        and careful craftsmanship to create embroidery that feels personal
+        and special.
+      </p>
+
+      <a href="#our-story" style="
+        display: inline-block;
+        padding: 14px 24px;
+        border-radius: 10px;
+        background: var(--pink);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+      ">
+        Discover Our Story →
+      </a>
+    </div>
+
+    <!-- Hero image -->
+    <div style="
+      position: relative;
+      height: min(65vh, 560px);
+      min-height: 300px;
+      overflow: hidden;
+      border-radius: 22px;
+      background: var(--light);
+    ">
+      <img
+        src="imges/Beautiful embroidery crafted by StitchCraft.avif"
+        alt="Beautiful embroidery crafted by StitchCraft"
+        style="
+          width: 100%;
+          height: 100%;
+          display: block;
+          object-fit: cover;
+        "
+      >
+    </div>
+
+  </div>
+</section>
+<!--section ending 1-->
+
+<!--section 2-->
+
+<section id="our-story" style="
+  padding: 20px 10px;
+  background: var(--white);
+  color: var(--text);
+">
+  <div style="
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    align-items: center;
+    gap: 50px;
+  ">
+
+    <!-- Story image -->
+    <div style="
+      min-height: 420px;
+      overflow: hidden;
+      border-radius: 22px;
+      background: var(--light);
+      border: 1px solid var(--border);
+    ">
+      <img
+        src="imges/A close-up of detailed embroidery work2.webp"
+        alt="A close-up of detailed embroidery work"
+        style="
+          display: block;
+          width: 100%;
+          height: 420px;
+          object-fit: cover;
+        "
+      >
+    </div>
+
+    <!-- Story content -->
+    <div>
+      <span style="
+        display: inline-block;
+        margin-bottom: 14px;
+        padding: 8px 14px;
+        border-radius: 30px;
+        background: var(--light);
+        color: var(--pink);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+      ">
+        OUR STORY
+      </span>
+
+      <h2 style="
+        margin: 0 0 22px;
+        font-family: Georgia, serif;
+        font-size: clamp(30px, 4vw, 44px);
+        line-height: 1.2;
+        color: var(--text);
+      ">
+        A Passion for Every Stitch
+      </h2>
+
+      <p style="
+        margin: 0 0 16px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.85;
+      "><b>
+        StitchCraft was created around a simple idea: embroidery can turn
+        an ordinary item into something personal and memorable. A thoughtful
+        pattern, carefully chosen thread, or a small embroidered detail can
+        carry meaning and express someone’s individuality.</b>
+      </p>
+
+      <p style="
+        margin: 0 0 16px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.85;
+      "><b>
+        We love the creative process—from imagining a design and selecting
+        colors to bringing each detail to life through stitching. Every
+        project gives us an opportunity to combine creativity, patience,
+        and attention to detail.</b>
+      </p>
+
+      <p style="
+        margin: 0 0 28px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.85;
+      "><b>
+        Whether it’s a personalized gift, a special garment, or an embroidery
+        design made just for you, our goal is to create pieces that feel
+        thoughtful, distinctive, and made with care. At StitchCraft, we
+        believe the smallest details can make the biggest difference.</b>
+      </p>
+
+      <div style="
+        padding-left: 18px;
+        border-left: 3px solid var(--pink);
+      ">
+        <p style="
+          margin: 0;
+          color: var(--text);
+          font-family: Georgia, serif;
+          font-size: 20px;
+          font-style: italic;
+          line-height: 1.6;
+        "><b>
+          “Every design begins with an idea—and every stitch brings it to life.”</b>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!--ending section 2-->
+<!--section 3-->
+<section id="mission-vision" style="
+  padding: 75px 20px;
+  background: var(--light);
+  color: var(--text);
+">
+  <div style="
+    max-width: 1150px;
+    margin: 0 auto;
+  ">
+
+    <!-- Section heading -->
+    <div style="
+      max-width: 680px;
+      margin: 0 auto 42px;
+      text-align: center;
+    ">
+      <span style="
+        display: inline-block;
+        margin-bottom: 14px;
+        padding: 8px 14px;
+        border-radius: 30px;
+        background: var(--card);
+        color: var(--pink);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+      ">
+        WHAT GUIDES US
+      </span>
+
+      <h2 style="
+        margin: 0 0 15px;
+        font-family: Georgia, serif;
+        font-size: clamp(30px, 4vw, 44px);
+        line-height: 1.2;
+        color: var(--text);
+      ">
+        Our Mission & Vision
+      </h2>
+
+      <p style="
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.7;
+      ">
+        The purpose behind our craft and the future we hope to create,
+        one thoughtful stitch at a time.
+      </p>
+    </div>
+
+    <!-- Mission and Vision cards -->
+    <div style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+      gap: 24px;
+    ">
+
+      <!-- Mission card -->
+      <article style="
+        padding: 32px;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        background: var(--card);
+      ">
+        <div style="
+          width: 52px;
+          height: 52px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 22px;
+          border-radius: 14px;
+          background: var(--light);
+          color: var(--pink);
+          font-size: 25px;
+        ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-diamond" viewBox="0 0 16 16">
+  <path d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.48 1.48 0 0 1 0-2.098zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z"/>
+</svg>
+        </div>
+
+        <h3 style="
+          margin: 0 0 16px;
+          font-family: Georgia, serif;
+          font-size: 27px;
+          color: var(--text);
+        ">
+          Our Mission
+        </h3>
+
+        <p style="
+          margin: 0;
+          color: var(--muted);
+          font-size: 16px;
+          line-height: 1.85;
+        ">
+          Our mission is to create beautiful, meaningful embroidery that
+          celebrates personal expression. Through thoughtful designs,
+          careful craftsmanship, and attention to detail, we aim to turn
+          everyday pieces into keepsakes that customers can cherish.
+          We strive to make each creation feel special, personal, and
+          made with care.
+        </p>
+      </article>
+
+      <!-- Vision card -->
+      <article style="
+        padding: 32px;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        background: var(--card);
+      ">
+        <div style="
+          width: 52px;
+          height: 52px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 22px;
+          border-radius: 14px;
+          background: var(--light);
+          color: var(--pink);
+          font-size: 25px;
+        ">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+</svg>
+        </div>
+
+        <h3 style="
+          margin: 0 0 16px;
+          font-family: Georgia, serif;
+          font-size: 27px;
+          color: var(--text);
+        ">
+          Our Vision
+        </h3>
+
+        <p style="
+          margin: 0;
+          color: var(--muted);
+          font-size: 16px;
+          line-height: 1.85;
+        ">
+          Our vision is to become a trusted name for creative and
+          personalized embroidery—known for quality, originality, and
+          thoughtful service. We hope to inspire people to appreciate
+          the beauty of handmade details and to make embroidery a
+          meaningful part of their everyday lives and special moments.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!--ending section 3-->
+
+<!--section 4-->
+<section id="our-values" style="
+  padding: 75px 20px;
+  background: var(--white);
+  color: var(--text);
+">
+  <div style="
+    max-width: 1150px;
+    margin: 0 auto;
+  ">
+
+    <!-- Section heading -->
+    <div style="
+      max-width: 680px;
+      margin: 0 auto 42px;
+      text-align: center;
+    ">
+      <span style="
+        display: inline-block;
+        margin-bottom: 14px;
+        padding: 8px 14px;
+        border-radius: 30px;
+        background: var(--light);
+        color: var(--pink);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+      ">
+        WHAT MATTERS TO US
+      </span>
+
+      <h2 style="
+        margin: 0 0 15px;
+        font-family: Georgia, serif;
+        font-size: clamp(30px, 4vw, 44px);
+        line-height: 1.2;
+        color: var(--text);
+      ">
+        Our Values
+      </h2>
+
+      <p style="
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.7;
+      ">
+        The principles behind every design, every detail, and every
+        creation we make at StitchCraft.
+      </p>
+    </div>
+
+    <!-- Values cards -->
+    <div style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+      gap: 20px;
+    ">
+
+      <!-- Craftsmanship -->
+      <article style="
+        padding: 27px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--light);
+      ">
+        <div style="
+          width: 48px;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 18px;
+          border-radius: 13px;
+          background: var(--light);
+          color: var(--pink);
+          font-size: 24px;
+        "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+  <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+</svg></div>
+
+        <h3 style="
+          margin: 0 0 12px;
+          font-family: Georgia, serif;
+          font-size: 23px;
+          color: var(--text);
+        ">Craftsmanship</h3>
+
+        <p style="
+          margin: 0;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.8;
+        ">
+          We value careful work, precise details, and thoughtful finishing
+          so each embroidered piece looks and feels special.
+        </p>
+      </article>
+
+      <!-- Creativity -->
+      <article style="
+        padding: 27px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--light);
+      ">
+        <div style="
+          width: 48px;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 18px;
+          border-radius: 13px;
+          background: var(--light);
+          color: var(--pink);
+          font-size: 24px;
+        "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-flower3" viewBox="0 0 16 16">
+  <path d="M11.424 8c.437-.052.811-.136 1.04-.268a2 2 0 0 0-2-3.464c-.229.132-.489.414-.752.767C9.886 4.63 10 4.264 10 4a2 2 0 1 0-4 0c0 .264.114.63.288 1.035-.263-.353-.523-.635-.752-.767a2 2 0 0 0-2 3.464c.229.132.603.216 1.04.268-.437.052-.811.136-1.04.268a2 2 0 1 0 2 3.464c.229-.132.489-.414.752-.767C6.114 11.37 6 11.736 6 12a2 2 0 1 0 4 0c0-.264-.114-.63-.288-1.035.263.353.523.635.752.767a2 2 0 1 0 2-3.464c-.229-.132-.603-.216-1.04-.268M9 4a2 2 0 0 1-.045.205q-.059.2-.183.484a13 13 0 0 1-.637 1.223L8 6.142l-.135-.23a13 13 0 0 1-.637-1.223 4 4 0 0 1-.183-.484A2 2 0 0 1 7 4a1 1 0 1 1 2 0M3.67 5.5a1 1 0 0 1 1.366-.366 2 2 0 0 1 .156.142q.142.15.326.4c.245.333.502.747.742 1.163l.13.232-.265.002a13 13 0 0 1-1.379-.06 4 4 0 0 1-.51-.083 2 2 0 0 1-.2-.064A1 1 0 0 1 3.67 5.5m1.366 5.366a1 1 0 0 1-1-1.732l.047-.02q.055-.02.153-.044.202-.048.51-.083a13 13 0 0 1 1.379-.06q.135 0 .266.002l-.131.232c-.24.416-.497.83-.742 1.163a4 4 0 0 1-.327.4 2 2 0 0 1-.155.142M9 12a1 1 0 0 1-2 0 2 2 0 0 1 .045-.206q.058-.198.183-.483c.166-.378.396-.808.637-1.223L8 9.858l.135.23c.241.415.47.845.637 1.223q.124.285.183.484A1.3 1.3 0 0 1 9 12m3.33-6.5a1 1 0 0 1-.366 1.366 2 2 0 0 1-.2.064q-.202.048-.51.083c-.412.045-.898.061-1.379.06q-.135 0-.266-.002l.131-.232c.24-.416.497-.83.742-1.163a4 4 0 0 1 .327-.4q.07-.074.114-.11l.041-.032a1 1 0 0 1 1.366.366m-1.366 5.366a2 2 0 0 1-.155-.141 4 4 0 0 1-.327-.4A13 13 0 0 1 9.74 9.16l-.13-.232.265-.002c.48-.001.967.015 1.379.06q.308.035.51.083.098.024.153.044l.048.02a1 1 0 1 1-1 1.732zM8 9a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
+</svg></div>
+
+        <h3 style="
+          margin: 0 0 12px;
+          font-family: Georgia, serif;
+          font-size: 23px;
+          color: var(--text);
+        ">Creativity</h3>
+
+        <p style="
+          margin: 0;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.8;
+        ">
+          We welcome fresh ideas, expressive patterns, and personal touches
+          that help every design reflect its owner.
+        </p>
+      </article>
+
+      <!-- Quality -->
+      <article style="
+        padding: 27px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--light);
+      ">
+        <div style="
+          width: 48px;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 18px;
+          border-radius: 13px;
+          background: var(--light);
+          color: var(--pink);
+          font-size: 24px;
+        "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-diamond" viewBox="0 0 16 16">
+  <path d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.48 1.48 0 0 1 0-2.098zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z"/>
+</svg></div>
+
+        <h3 style="
+          margin: 0 0 12px;
+          font-family: Georgia, serif;
+          font-size: 23px;
+          color: var(--text);
+        ">Quality</h3>
+
+        <p style="
+          margin: 0;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.8;
+        ">
+          We pay attention to design, materials, and finishing, aiming to
+          deliver embroidery customers can enjoy with confidence.
+        </p>
+      </article>
+
+      <!-- Customer care -->
+      <article style="
+        padding: 27px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--light);
+      ">
+        <div style="
+          width: 48px;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 18px;
+          border-radius: 13px;
+          background: var(--light);
+          color: var(--pink);
+          font-size: 24px;
+        "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+</svg></div>
+
+        <h3 style="
+          margin: 0 0 12px;
+          font-family: Georgia, serif;
+          font-size: 23px;
+          color: var(--text);
+        ">Customer Care</h3>
+
+        <p style="
+          margin: 0;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.8;
+        ">
+          We listen to each customer's preferences and strive to make the
+          experience friendly, personal, and enjoyable.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+<!--ending section 4-->
+
+<!--section 5-->
+
+<section id="craftsmanship-team" style="
+  padding: 75px 20px;
+  background: var(--light);
+  color: var(--text);
+">
+  <div style="
+    max-width: 1150px;
+    margin: 0 auto;
+  ">
+
+    <!-- Section heading -->
+    <div style="
+      max-width: 700px;
+      margin: 0 auto 45px;
+      text-align: center;
+    ">
+      <span style="
+        display: inline-block;
+        margin-bottom: 14px;
+        padding: 8px 14px;
+        border-radius: 30px;
+        background: var(--card);
+        color: var(--pink);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+      ">
+        THE PEOPLE & THE PROCESS
+      </span>
+
+      <h2 style="
+        margin: 0 0 16px;
+        font-family: Georgia, serif;
+        font-size: clamp(30px, 4vw, 44px);
+        line-height: 1.2;
+        color: var(--text);
+      ">
+        Made with Skill, <span style="color: var(--pink); font-style: italic;">Made with Heart</span>
+      </h2>
+
+      <p style="
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.8;
+      ">
+        Behind every beautiful embroidery piece is a thoughtful process
+        and a team that cares about the little details.
+      </p>
+    </div>
+
+    
+
+    <!-- Our team -->
+    <div style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+      align-items: center;
+      gap: 35px;
+    ">
+      <div>
+        <span style="
+          color: var(--pink);
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 1.5px;
+        ">OUR TEAM</span>
+
+        <h3 style="
+          margin: 12px 0 18px;
+          font-family: Georgia, serif;
+          font-size: clamp(26px, 3vw, 34px);
+          color: var(--text);
+        ">
+          Creative Hands, One Shared Passion
+        </h3>
+
+        <p style="
+          margin: 0 0 15px;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.85;
+        ">
+          StitchCraft is built around a love for embroidery and a shared
+          commitment to creating work customers can feel proud of.
+          Every idea, design choice, and finishing touch contributes
+          to the final piece.
+        </p>
+
+        <p style="
+          margin: 0;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.85;
+        ">
+          We value collaboration, learning, and listening to our customers.
+          Their ideas inspire us to create embroidery that feels personal
+          and reflects the occasion, style, or story behind each order.
+        </p>
+      </div>
+
+      <div style="
+        overflow: hidden;
+        border-radius: 20px;
+        border: 1px solid var(--border);
+        background: var(--card);
+      ">
+        <img
+          src="imges/StitchCraft team working together on embroidery.webp"
+          alt="StitchCraft team working together on embroidery"
+          style="
+            display: block;
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+          "
+        >
+      </div>
+    </div>
+    <!-- Craftsmanship -->
+    <div style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+      align-items: center;
+      gap: 35px;
+      margin-bottom: 55px;
+    ">
+      <div style="
+        overflow: hidden;
+        border-radius: 20px;
+        border: 1px solid var(--border);
+        background: var(--card);
+      ">
+        <img
+          src="imges/Close-up of detailed embroidery craftsmanship.webp"
+          alt="Close-up of detailed embroidery craftsmanship"
+          style="
+            display: block;
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+          "
+        >
+      </div>
+
+      <div>
+        <span style="
+          color: var(--pink);
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 1.5px;
+        ">OUR CRAFTSMANSHIP</span>
+
+        <h3 style="
+          margin: 12px 0 18px;
+          font-family: Georgia, serif;
+          font-size: clamp(26px, 3vw, 34px);
+          color: var(--text);
+        ">
+          Every Detail Deserves Care
+        </h3>
+
+        <p style="
+          margin: 0 0 15px;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.85;
+        ">
+          Embroidery is more than thread and fabric—it is a way to bring
+          ideas, memories, and personality into a design. We approach
+          each piece with patience, creativity, and attention to detail.
+        </p>
+
+        <p style="
+          margin: 0;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.85;
+        ">
+          From choosing colors and preparing a pattern to checking the
+          finished work, we aim to make every creation neat, distinctive,
+          and meaningful.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!--ending section 5-->
+<!--section 6-->
+
+
+<section id="why-choose-stitchcraft" style="
+  padding: 75px 20px;
+  background: var(--white);
+  color: var(--text);
+">
+  <div style="
+    max-width: 1150px;
+    margin: 0 auto;
+  ">
+
+    <!-- Why Choose Us heading -->
+    <div style="
+      max-width: 700px;
+      margin: 0 auto 42px;
+      text-align: center;
+    ">
+      <span style="
+        display: inline-block;
+        margin-bottom: 14px;
+        padding: 8px 14px;
+        border-radius: 30px;
+        background: var(--light);
+        color: var(--pink);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+      ">
+        THE STITCHCRAFT DIFFERENCE
+      </span>
+
+      <h2 style="
+        margin: 0 0 15px;
+        font-family: Georgia, serif;
+        font-size: clamp(30px, 4vw, 44px);
+        line-height: 1.2;
+        color: var(--text);
+      ">
+        Why Choose <span style="color: var(--pink); font-style: italic;">StitchCraft?</span>
+      </h2>
+
+      <p style="
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.8;
+      ">
+        We bring creativity, care, and thoughtful details together
+        to make embroidery feel truly personal.
+      </p>
+    </div>
+
+    <!-- Reasons -->
+    <div style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+      gap: 20px;
+    ">
+
+      <article style="
+        padding: 27px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--light);
+      ">
+        <div style="
+          margin-bottom: 16px;
+          color: var(--pink);
+          font-size: 28px;
+        "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-flower3" viewBox="0 0 16 16">
+  <path d="M11.424 8c.437-.052.811-.136 1.04-.268a2 2 0 0 0-2-3.464c-.229.132-.489.414-.752.767C9.886 4.63 10 4.264 10 4a2 2 0 1 0-4 0c0 .264.114.63.288 1.035-.263-.353-.523-.635-.752-.767a2 2 0 0 0-2 3.464c.229.132.603.216 1.04.268-.437.052-.811.136-1.04.268a2 2 0 1 0 2 3.464c.229-.132.489-.414.752-.767C6.114 11.37 6 11.736 6 12a2 2 0 1 0 4 0c0-.264-.114-.63-.288-1.035.263.353.523.635.752.767a2 2 0 1 0 2-3.464c-.229-.132-.603-.216-1.04-.268M9 4a2 2 0 0 1-.045.205q-.059.2-.183.484a13 13 0 0 1-.637 1.223L8 6.142l-.135-.23a13 13 0 0 1-.637-1.223 4 4 0 0 1-.183-.484A2 2 0 0 1 7 4a1 1 0 1 1 2 0M3.67 5.5a1 1 0 0 1 1.366-.366 2 2 0 0 1 .156.142q.142.15.326.4c.245.333.502.747.742 1.163l.13.232-.265.002a13 13 0 0 1-1.379-.06 4 4 0 0 1-.51-.083 2 2 0 0 1-.2-.064A1 1 0 0 1 3.67 5.5m1.366 5.366a1 1 0 0 1-1-1.732l.047-.02q.055-.02.153-.044.202-.048.51-.083a13 13 0 0 1 1.379-.06q.135 0 .266.002l-.131.232c-.24.416-.497.83-.742 1.163a4 4 0 0 1-.327.4 2 2 0 0 1-.155.142M9 12a1 1 0 0 1-2 0 2 2 0 0 1 .045-.206q.058-.198.183-.483c.166-.378.396-.808.637-1.223L8 9.858l.135.23c.241.415.47.845.637 1.223q.124.285.183.484A1.3 1.3 0 0 1 9 12m3.33-6.5a1 1 0 0 1-.366 1.366 2 2 0 0 1-.2.064q-.202.048-.51.083c-.412.045-.898.061-1.379.06q-.135 0-.266-.002l.131-.232c.24-.416.497-.83.742-1.163a4 4 0 0 1 .327-.4q.07-.074.114-.11l.041-.032a1 1 0 0 1 1.366.366m-1.366 5.366a2 2 0 0 1-.155-.141 4 4 0 0 1-.327-.4A13 13 0 0 1 9.74 9.16l-.13-.232.265-.002c.48-.001.967.015 1.379.06q.308.035.51.083.098.024.153.044l.048.02a1 1 0 1 1-1 1.732zM8 9a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
+</svg></div>
+        <h3 style="
+          margin: 0 0 12px;
+          font-family: Georgia, serif;
+          font-size: 22px;
+          color: var(--text);
+        ">Personalized Designs</h3>
+        <p style="
+          margin: 0;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.8;
+        ">
+          Add a personal touch with embroidery ideas inspired by your
+          preferences, occasions, and individual style.
+        </p>
+      </article>
+
+      <article style="
+        padding: 27px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--light);
+      ">
+        <div style="
+          margin-bottom: 16px;
+          color: var(--pink);
+          font-size: 28px;
+        "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+  <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+</svg></div>
+        <h3 style="
+          margin: 0 0 12px;
+          font-family: Georgia, serif;
+          font-size: 22px;
+          color: var(--text);
+        ">Careful Craftsmanship</h3>
+        <p style="
+          margin: 0;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.8;
+        ">
+          We focus on the details—from design and thread choices
+          to the finishing touches.
+        </p>
+      </article>
+
+      <article style="
+        padding: 27px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--light);
+      ">
+        <div style="
+          margin-bottom: 16px;
+          color: var(--pink);
+          font-size: 28px;
+        "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+</svg></div>
+        <h3 style="
+          margin: 0 0 12px;
+          font-family: Georgia, serif;
+          font-size: 22px;
+          color: var(--text);
+        ">Made with Care</h3>
+        <p style="
+          margin: 0;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.8;
+        ">
+          Each project is approached with patience and a commitment
+          to making the finished piece feel special.
+        </p>
+      </article>
+
+      <article style="
+        padding: 27px;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--light);
+      ">
+        <div style="
+          margin-bottom: 16px;
+          color: var(--pink);
+          font-size: 28px;
+        "><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-diamond" viewBox="0 0 16 16">
+  <path d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.48 1.48 0 0 1 0-2.098zm1.4.7a.495.495 0 0 0-.7 0L1.134 7.65a.495.495 0 0 0 0 .7l6.516 6.516a.495.495 0 0 0 .7 0l6.516-6.516a.495.495 0 0 0 0-.7L8.35 1.134z"/>
+</svg></div>
+        <h3 style="
+          margin: 0 0 12px;
+          font-family: Georgia, serif;
+          font-size: 22px;
+          color: var(--text);
+        ">Friendly Support</h3>
+        <p style="
+          margin: 0;
+          color: var(--muted);
+          font-size: 15px;
+          line-height: 1.8;
+        ">
+          We welcome your ideas and help you explore options
+          for your embroidery request.
+        </p>
+      </article>
+
+    </div>
+
+    <!-- CTA banner -->
+    <div style="
+      margin-top: 45px;
+      padding: 38px 25px;
+      border-radius: 22px;
+      background: var(--dark);
+      color: var(--page);
+      text-align: center;
+    ">
+      <h2 style="
+        margin: 0 0 14px;
+        font-family: Georgia, serif;
+        font-size: clamp(26px, 4vw, 38px);
+        line-height: 1.25;
+        color: var(--page);
+      ">
+        Have an Idea in Mind?
+      </h2>
+
+      <p style="
+        max-width: 600px;
+        margin: 0 auto 24px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.8;
+      ">
+        Let’s bring your idea to life with embroidery made just for you.
+        Tell us what you’re imagining, and let’s get started.
+      </p>
+
+      <a href="contact.html" style="
+        display: inline-block;
+        padding: 14px 25px;
+        border-radius: 10px;
+        background: var(--pink);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+      ">
+        Start Your Custom Order →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!--ending section 6-->
+<!--<main class="page-main">
+<section class="page-hero">
+  <h1>About StitchCraft</h1>
+  <div class="underline"></div>
+  <p>Personalized with care, one stitch at a time.</p>
+</section>
+<section class="section about-text">
+  <div class="about-grid">
+    <img src="imges/heroimage.webp" alt="Our embroidery work">
+    <div>
+      <h2>Our Story</h2>
+      <p>StitchCraft started with a simple idea: everyone should be able to wear and gift something truly personal. From a single monogrammed towel to hundreds of team jackets, every order is stitched with the same attention to detail.</p>
+      <p>Choose your own design, and our team turns it into long-lasting embroidery on apparel, towels, bags and home linens.</p>
+    </div>
+  </div>
+  <div class="stats">
+    <div><span>100+</span><small>Happy Customers</small></div>
+    <div><span>200+</span><small>Designs Stitched</small></div>
+    <div><span>48 hrs</span><small>Quick Turnaround</small></div>
+    <div><span>100%</span><small>Quality Checked</small></div>
+  </div>
+</section>
+<section class="bulk">
+  <div><h2>Have a design in mind?</h2><p>Let us bring it to life.</p></div>
+  <a href="custom.html" class="btn">Upload Your Design →</a>
+</section>
+</main>-->
+
+<footer class="footer" id="contact">
+  <div class="footer-grid">
+    <div id="about">
+      <div class="logo">
+      <img src="imges/Embroidered S-C Needlework Emblem.png" alt="StitchCraft Logo" style="margin-top: -20px;">
+      <div class="brand-text">
+        <a href="#home"><span class="brand-stitch">Stitch </span><span style="color: lightblue;">&amp;</span><span class="brand-craft"> Craft</span></a>
+        <p><span style="color: black;"> choose your own design</span></p>
+      </div>
+    </div>
+      <p><span style="color: black;"> Details. Lasting memories.<br>Personalized with care, one stitch at a time.</span></p>
+      <div class="socials">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.pinterest.com/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="contact.html"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <!--<a href="custom.html">Custom Design</a>
+      <a href="bulk.html">Bulk Orders</a>-->
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      <h3>Customer Support</h3>
+      <a href="contact.html">FAQs</a>
+      <a href="contact.html">Shipping &amp; Delivery</a>
+      <a href="contact.html">Returns &amp; Exchanges</a>
+      <a href="contact.html">Care Instructions</a>
+      <a href="contact.html">Privacy Policy</a>
+    </div>
+
+    <div>
+      <h3>Contact Us</h3>
+      <a href="mailto:info@stitchcraft.com"> info@stitchcraft.com</a>
+      <a href="tel:+91 0000000000"> +91 0000000000</a>
+      <p><span style="color: black;">Monday - Friday: 9:00 AM - 6:00 PM</span></p>
+      <p><span style="color: black;"> B.Kothakota,Near Madanapalli,Annamayya(D)</span></p>
+
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>© 2026 StitchCraft. All rights reserved.</p>
+    <p>Terms and Conditions</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

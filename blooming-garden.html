@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blooming Garden | StitchCraft</title>
+
+<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#fff5f1;color:#102a43}
+section{padding:45px 6%}
+.banner{text-align:center;background:#fce2dc;margin:35px 5%;border-radius:20px;padding:45px 20px}
+.banner h1{font-size:38px;margin-bottom:14px}
+.banner p,.description p{color:#596579;line-height:1.8}
+.layout{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.design-img{width:100%;height:420px;object-fit:cover;border-radius:18px}
+h2{font-size:28px;margin-bottom:18px}
+.description p{margin-bottom:15px}
+.price{font-size:25px;color:#e94365;font-weight:bold;margin:20px 0}
+.specs{background:#fff;border-radius:16px}
+.spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.spec{background:#fff5f1;padding:22px;border-radius:12px}
+.spec h3{margin-bottom:10px;font-size:17px}
+.spec p{color:#667085;line-height:1.6}
+.form-box{max-width:750px;margin:auto;background:white;padding:30px;border-radius:18px}
+.form-box label{display:block;font-weight:bold;margin:16px 0 8px}
+.form-box input,.form-box select,.form-box textarea{width:100%;padding:13px;border:1px solid #ddd;border-radius:7px;font:inherit}
+.form-box textarea{height:100px;resize:vertical}
+.btn{display:inline-block;background:#e94365;color:white;border:0;padding:14px 24px;border-radius:7px;text-decoration:none;cursor:pointer;font-weight:bold;margin-top:20px}
+.btn:hover{background:#c82e50}
+footer{text-align:center;background:#102a43;color:white;padding:20px}
+@media(max-width:700px){.layout,.spec-grid{grid-template-columns:1fr}.banner h1{font-size:30px}.design-img{height:300px}}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <img src="imges/Embroidered S-C Needlework Emblem.png" alt="StitchCraft Logo">
+    <div class="brand-text">
+      <a href="#home"><span class="brand-stitch">Stitch </span><span style="color: lightblue;">&amp;</span><span class="brand-craft"> Craft</span></a>
+      <p><span style="color: black;"> choose your own design</span></p>
+    </div>
+  </div>
+
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <div class="navbar">
+    <nav class="b">
+      <div class="dropdown" id="homeDropdown">
+        <a href="index.html" class="nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false" >
+          Home <i class="fa-solid fa-chevron-down"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="index.html" class="nav-link">Home – Premium</a>
+          <a href="eindex.html" class="nav-link">Home – Elite</a>
+        </div>
+      </div>
+      <a href="products.html" class="current nav-link active">Products</a>
+      <a href="services.html" class="nav-link">services</a>
+      <!--<a href="bulk.html">Bulk Orders</a>-->
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    
+
+    <div class="display-options">
+      <button type="button" id="rtlMode" class="display-btn" aria-label="Toggle text direction" title="Switch to RTL">RTL</button>
+      <button type="button" id="themeMode" class="display-btn" aria-label="Switch to dark mode" title="Dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+    <div class="nav-actions">
+      <a href="custom.html" class="btn">Get a Quote</a>
+    </div>
+  </div>
+</header>
+
+<section class="banner">
+<h1>Blooming Garden</h1>
+<p>Delicate floral embroidery inspired by the beauty of nature.</p>
+</section>
+
+<section class="layout">
+<img class="design-img" src="imges/Bridal embroidery.jpg" alt="Floral embroidery design">
+<div class="description">
+<h2>Beautiful Floral Embroidery</h2>
+<p>Bring your garments to life with elegant floral patterns, delicate petals and graceful leaf details.</p>
+<p>This design is ideal for blouses, sarees, dresses and personalized fabric creations.</p>
+<p>Choose your preferred colors and share your ideas to customize the design.</p>
+<div class="price">Price: Contact for a quote</div>
+<a href="#customize" class="btn">Customize This Design</a>
+</div>
+</section>
+
+<section class="specs">
+<h2 style="text-align:center">Design Specifications</h2>
+<div class="spec-grid">
+<div class="spec"><h3>Design Style</h3><p>Floral and botanical patterns</p></div>
+<div class="spec"><h3>Suitable For</h3><p>Blouses, sarees and dresses</p></div>
+<div class="spec"><h3>Customization</h3><p>Colors, pattern size and placement</p></div>
+</div>
+</section>
+
+<section id="customize">
+<div class="form-box">
+<h2>Customize Blooming Garden</h2>
+<form onsubmit="event.preventDefault();alert('Form validated. Connect a backend to submit your request.');">
+<label for="name">Full Name *</label>
+<input id="name" name="name" required placeholder="Enter your name">
+
+<label for="email">Email Address *</label>
+<input id="email" name="email" type="email" required placeholder="Enter your email">
+
+<label for="fabric">Fabric Type *</label>
+<select id="fabric" name="fabric" required>
+<option value="">Select fabric</option>
+<option>Silk</option><option>Cotton</option><option>Georgette</option><option>Velvet</option><option>Other</option>
+</select>
+
+<label for="colors">Preferred Colors</label>
+<input id="colors" name="colors" placeholder="E.g. pink, green and gold">
+
+<label for="notes">Design Requirements *</label>
+<textarea id="notes" name="notes" required placeholder="Describe your preferred floral pattern and placement"></textarea>
+
+<button class="btn" type="submit">Submit Customization Request</button>
+</form>
+</div>
+</section>
+
+<footer class="footer" id="contact">
+  <div class="footer-grid">
+    <div id="about">
+      <div class="logo">
+      <img src="imges/Embroidered S-C Needlework Emblem.png" alt="StitchCraft Logo" style="margin-top: -20px;">
+      <div class="brand-text">
+        <a href="#home"><span class="brand-stitch">Stitch </span><span style="color: lightblue;">&amp;</span><span class="brand-craft"> Craft</span></a>
+        <p><span style="color: black;"> choose your own design</span></p>
+      </div>
+    </div>
+      <p><span style="color: black;"> Details. Lasting memories.<br>Personalized with care, one stitch at a time.</span></p>
+      <div class="socials">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.pinterest.com/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="contact.html"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <!--<a href="custom.html">Custom Design</a>
+      <a href="bulk.html">Bulk Orders</a>-->
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      <h3>Customer Support</h3>
+      <a href="contact.html">FAQs</a>
+      <a href="contact.html">Shipping &amp; Delivery</a>
+      <a href="contact.html">Returns &amp; Exchanges</a>
+      <a href="contact.html">Care Instructions</a>
+      <a href="contact.html">Privacy Policy</a>
+    </div>
+
+    <div>
+      <h3>Contact Us</h3>
+      <a href="mailto:info@stitchcraft.com"> info@stitchcraft.com</a>
+      <a href="tel:+91 0000000000"> +91 0000000000</a>
+      <p><span style="color: black;">Monday - Friday: 9:00 AM - 6:00 PM</span></p>
+      <p><span style="color: black;"> B.Kothakota,Near Madanapalli,Annamayya(D)</span></p>
+
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>© 2026 StitchCraft. All rights reserved.</p>
+    <p>Terms and Conditions</p>
+  </div>
+</footer>
+</body>
+</html>

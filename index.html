@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StitchCraft | Custom Embroidery</title>
+  <link rel="icon" href="imges/Embroidered S-C Needlework Emblem.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">
+    <img src="imges/Embroidered S-C Needlework Emblem.png" alt="StitchCraft Logo">
+    <div class="brand-text">
+      <a href="#home"><span class="brand-stitch">Stitch </span><span style="color: lightblue;">&amp;</span><span class="brand-craft"> Craft</span></a>
+      <p><span style="color: black;"> choose your own design</span></p>
+    </div>
+  </div>
+
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <div class="navbar">
+    <nav class="b">
+      <div class="dropdown" id="homeDropdown">
+        <a href="index.html" class="nav-link active dropdown-toggle" aria-haspopup="true" aria-expanded="false" >
+          Home <i class="fa-solid fa-chevron-down"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="index.html" class="active">Home – Premium</a>
+          <a href="eindex.html" class="nav-link">Home – Elite</a>
+        </div>
+      </div>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="services.html" class="nav-link">services</a>
+      <!--<a href="bulk.html">Bulk Orders</a>-->
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    
+
+    <div class="display-options">
+      <button type="button" id="rtlMode" class="display-btn" aria-label="Toggle text direction" title="Switch to RTL">RTL</button>
+      <button type="button" id="themeMode" class="display-btn" aria-label="Switch to dark mode" title="Dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+    <div class="nav-actions">
+      <a href="custom.html" class="btn">Get a Quote</a>
+    </div>
+  </div>
+</header>
+
+<!---section1-->
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="eyebrow">PERSONALIZED GIFTS FOR EVERY OCCASION</p>
+    <h1>Custom Embroidery<br>Made <span>Just for You</span></h1>
+    <p>Personalized apparel, towels, bags, and home linens with high-quality embroidery and monogramming.</p>
+    <a href="products.html" class="btn">Shop Now →</a>
+    <a href="custom.html" class="btn btn-outline">Upload Your Design</a>
+
+    <div class="benefits">
+      <div>
+        <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hearts" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.931.481c1.627-1.671 5.692 1.254 0 5.015-5.692-3.76-1.626-6.686 0-5.015m6.84 1.794c1.084-1.114 3.795.836 0 3.343-3.795-2.507-1.084-4.457 0-3.343M7.84 7.642c2.71-2.786 9.486 2.09 0 8.358-9.487-6.268-2.71-11.144 0-8.358"/>
+</svg> Premium Quality</strong>
+        <small>Long-lasting stitches</small>
+      </div>
+      <div>
+        <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tree" viewBox="0 0 16 16">
+  <path d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777zM6.437 4.758A.5.5 0 0 0 6 4.5h-.066L8 1.401 10.066 4.5H10a.5.5 0 0 0-.424.765L11.598 8.5H11.5a.5.5 0 0 0-.447.724L12.69 12.5H3.309l1.638-3.276A.5.5 0 0 0 4.5 8.5h-.098l2.022-3.235a.5.5 0 0 0 .013-.507"/>
+</svg> Fast Turnaround</strong>
+        <small>On-time delivery</small>
+      </div>
+      <div>
+        <strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hearts" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.931.481c1.627-1.671 5.692 1.254 0 5.015-5.692-3.76-1.626-6.686 0-5.015m6.84 1.794c1.084-1.114 3.795.836 0 3.343-3.795-2.507-1.084-4.457 0-3.343M7.84 7.642c2.71-2.786 9.486 2.09 0 8.358-9.487-6.268-2.71-11.144 0-8.358"/>
+</svg>  Unique &amp; Personal</strong>
+        <small>Perfect for every occasion</small>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <div class="slide">
+      <img src="imges/eslide1.jpg" alt="StitchCraft">
+    </div>
+  </div>
+</section>
+<!--ENDING SECTION 1-->
+
+<!--section2-->
+
+<section class="products section" id="products">
+  <h2>Shop by Category</h2>
+  <div class="underline"></div>
+  <p>Explore our wide range of embroidered products.</p>
+
+  <div class="product-grid">
+    <article class="product-card">
+      <a href="products.html"><img src="imges/Apparel.jpg" alt="Apparel"></a>
+      <h3>Apparel</h3>
+      <p>T-shirts, Hoodies, Jackets</p>
+    </article>
+
+    <article class="product-card">
+      <a href="products.html"><img src="imges/Towels.jpg" alt="Towels"></a>
+      <h3>Towels</h3>
+      <p>Bath, Hand, Kitchen Towels</p>
+    </article>
+
+    <article class="product-card">
+      <a href="products.html"><img src="imges/Bags.webp" alt="Bags"></a>
+      <h3>Bags</h3>
+      <p>Totes, Backpacks, Pouches</p>
+    </article>
+
+    <article class="product-card">
+      <a href="products.html"><img src="imges/home linens.jpg" alt="Home linens"></a>
+      <h3>Home Linens</h3>
+      <p>Pillows, Blankets, Table Runners</p>
+    </article>
+  </div>
+</section>
+
+<!--ENDING SECTION 2-->
+
+
+
+<!--section3-->
+
+<section class="how section" id="custom">
+  <h2>How It Works</h2>
+  <div class="underline"></div>
+
+  <div class="steps">
+    <div class="lines">
+      <span>01</span>
+      <h3>Upload Your Design</h3>
+      <p>Send us your logo, text, or idea.</p>
+    </div>
+    <div class="lines">
+      <span>02</span>
+      <h3>Get a Quote</h3>
+      <p>Receive a custom quotation.</p>
+    </div>
+    <div class="lines">
+      <span>03</span>
+      <h3>We Create</h3>
+      <p>Our team embroiders your design.</p>
+    </div>
+    <div class="lines">
+      <span>04</span>
+      <h3>Delivered to You</h3>
+      <p>Receive your custom order.</p>
+    </div>
+  </div>
+</section>
+
+<!--ENDING SECTION 3-->
+
+<!--SECTION 4-->
+
+<section class="bulk" id="bulk">
+  <div>
+    <h2>Special Designs. Beautifully Stitched.</h2>
+    <p>Custom embroidery for teams, events, and businesses.</p>
+  </div>
+  <a href="custom.html" class="btn">Request a Quote →</a>
+</section>
+
+<!--ENDING SECTION 4-->
+
+<!--SECTION 5-->
+
+<section class="our-services" id="services">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Our Services</h2>
+      <p>
+        From personalized embroidery to business orders,
+        we add creativity and care to every stitch.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-icon"><img src="imges/thread.png"></div>
+        <h3>Custom Embroidery</h3>
+        <p>
+          Personalize clothing, bags and accessories with
+          names, initials or custom designs.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon"><img src="imges/artist-palette.png"></div>
+        <h3>Design & Digitizing</h3>
+        <p>
+          Prepare artwork and logos as embroidery-ready
+          designs with detailed stitching.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon"><img src="imges/dress.jpg" style="height: 235px; width: 1000px;"></div>
+        <h3>Fashion Embroidery</h3>
+        <p>
+          Add decorative embroidery to garments such as
+          dresses, blouses and sarees.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon"><img src="imges/label.png"></div>
+        <h3>Logo & Uniforms</h3>
+        <p>
+          Embroider logos on uniforms, workwear and
+          team clothing for a professional finish.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon"><img src="imges/package.png"></div>
+        <h3>Bulk Orders</h3>
+        <p>
+          Embroidery for businesses, events, teams
+          and larger orders.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon"><img src="imges/gift.webp" alt="gifts" style="height: 235px; width: 1000px;"></div>
+        <h3>Personalized Gifts</h3>
+        <p>
+          Make gifts special with custom names,
+          initials and meaningful designs.
+        </p>
+      </article>
+    </div>
+    </div>
+  </div>
+</section>
+
+
+<!--ENDING SECTION 5-->
+
+<!--SECTION 6-->
+<section class="our-process" id="process" style="margin-top: -20px;">
+  <div class="container">
+
+    <div class="section-heading">
+      <h2>Our Process</h2>
+      <p>
+        From your first idea to the finished embroidery,
+        we make the process simple and clear.
+      </p>
+    </div>
+
+    <div class="process-grid">
+
+      <div class="process-card">
+        <span class="process-number">01</span>
+        <h3>Share Your Idea</h3>
+        <p>
+          Tell us about your embroidery project and share
+          your design, logo or inspiration.
+        </p>
+      </div>
+
+      <div class="process-card">
+        <span class="process-number">02</span>
+        <h3>Design & Quote</h3>
+        <p>
+          We discuss the design, fabric, quantity and
+          provide a quote for your order.
+        </p>
+      </div>
+
+      <div class="process-card">
+        <span class="process-number">03</span>
+        <h3>Stitch & Check</h3>
+        <p>
+          We create your embroidery and check the
+          finished work for quality.
+        </p>
+      </div>
+
+      <div class="process-card">
+        <span class="process-number">04</span>
+        <h3>Ready for Delivery</h3>
+        <p>
+          Your completed order is prepared for pickup
+          or delivery.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!--ENDING SECTION 6-->
+<!--SECTION 7-->
+<section class="why-stitchcraft" id="why-choose-us">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <span class="eyebrow">Why StitchCraft?</span>
+      <h2>Why Choose StitchCraft</h2>
+      <p>
+        Creative embroidery, thoughtful service and attention
+        to detail in every project.
+      </p>
+    </div>
+
+    <div class="why-grid">
+
+      <article class="why-card reveal" style="--delay: 0s">
+        <div class="why-icon"><img src="imges/attentiontodetail.jpg" alt="thread"></div>
+        <h3>Attention to Detail</h3>
+        <p>We focus on the details that make embroidery look neat and beautiful.</p>
+      </article>
+
+      <article class="why-card reveal" style="--delay: 0.15s">
+        <div class="why-icon"><img src="imges/personalizeddesign.webp" alt="colors"></div>
+        <h3>Personalized Designs</h3>
+        <p>Bring your ideas, names or logos to life with custom embroidery.</p>
+      </article>
+
+      <article class="why-card reveal" style="--delay: 0.3s">
+        <div class="why-icon"><img src="imges/custmorfocused.jpg" alt="shankhand" style="height: 170px; width: 500px;"></div>
+        <h3>Customer-Focused</h3>
+        <p>We listen to your requirements and keep you informed about your project.</p>
+      </article>
+
+      <article class="why-card reveal" style="--delay: 0.45s">
+        <div class="why-icon"><img src="imges/flexableordws.jpg" alt="packages" style="height: 170px; width: 500px;"></div>
+        <h3>Flexible Orders</h3>
+        <p>Contact us to discuss embroidery for personal items or larger orders.</p>
+      </article>
+
+    </div>
+    </div>
+
+  </div>
+</section>
+
+<!--ENDING SECTION 7-->
+<footer class="footer" id="contact">
+  <div class="footer-grid">
+    <div id="about">
+      <div class="logo">
+      <img src="imges/Embroidered S-C Needlework Emblem.png" alt="StitchCraft Logo" style="margin-top: -20px;">
+      <div class="brand-text">
+        <a href="#home"><span class="brand-stitch">Stitch </span><span style="color: lightblue;">&amp;</span><span class="brand-craft"> Craft</span></a>
+        <p><span style="color: black;"> choose your own design</span></p>
+      </div>
+    </div>
+      <p><span style="color: black;"> Details. Lasting memories.<br>Personalized with care, one stitch at a time.</span></p>
+      <div class="socials">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.pinterest.com/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="contact.html"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <!--<a href="custom.html">Custom Design</a>
+      <a href="bulk.html">Bulk Orders</a>-->
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div>
+      <h3>Customer Support</h3>
+      <a href="contact.html">FAQs</a>
+      <a href="contact.html">Shipping &amp; Delivery</a>
+      <a href="contact.html">Returns &amp; Exchanges</a>
+      <a href="contact.html">Care Instructions</a>
+      <a href="contact.html">Privacy Policy</a>
+    </div>
+
+    <div>
+      <h3>Contact Us</h3>
+      <a href="mailto:info@stitchcraft.com"> info@stitchcraft.com</a>
+      <a href="tel:+91 0000000000"> +91 0000000000</a>
+      <p><span style="color: black;">Monday - Friday: 9:00 AM - 6:00 PM</span></p>
+      <p><span style="color: black;"> B.Kothakota,Near Madanapalli,Annamayya(D)</span></p>
+
+    </div>
+  </div>
+
+  <div class="copyright">
+    <p>© 2026 StitchCraft. All rights reserved.</p>
+    <p>Terms and Conditions</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
