@@ -1,229 +1,650 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Discover the art of embroidery and learn how personalized stitching adds creativity, character, and style to everyday clothing.">
+<meta name="description" content="Explore embroidery styles, techniques, beautiful designs and personalized fashion with StitchCraft.">
+<link rel="icon" type="image/png" sizes="64x64" href="imges/Embroidered S-C Needlework Emblem.png">
 
-    <title>The Art of Embroidery | StitchCraft</title>
+<title>The Art of Embroidery | StitchCraft</title>
 
-    <link rel="icon" href="imges/Embroidered S-C Needlework Emblem.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="icon" href="imges/Embroidered S-C Needlework Emblem.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        body {
-            margin: 0;
-        }
+body {
+    margin: 0;
+}
 
-        .article-page {
-            padding: 55px 20px 80px;
-            background: var(--light, #ffffff);
-            color: var(--text, #102537);
-        }
+/* =================================
+   COMMON STYLES
+================================= */
 
-        .article-container {
-            width: 100%;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+.article-page {
+    padding: 55px 5%;
+    background: var(--light, #fff);
+    color: var(--text, #102537);
+}
 
-        .article-breadcrumb {
-            margin-bottom: 25px;
-            color: var(--muted, #687481);
-            font-size: 14px;
-        }
+.article-layout {
+    max-width: 1350px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 35px;
+    align-items: start;
+}
 
-        .article-breadcrumb a {
-            color: var(--pink, #dc4962);
-            text-decoration: none;
-        }
+.article-container {
+    min-width: 0;
+}
 
-        .article-header {
-            max-width: 850px;
-            margin: 0 auto 32px;
-            text-align: center;
-        }
+.article-body {
+    max-width: 850px;
+    margin: auto;
+}
 
-        .article-category {
-            display: inline-block;
-            padding: 8px 16px;
-            margin-bottom: 15px;
-            border-radius: 30px;
-            background: var(--light, #fff5f1);
-            color: var(--pink, #dc4962);
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
+.article-body h2 {
+    color: var(--text, #102537);
+    font-family: Georgia, serif;
+    font-size: clamp(25px, 3vw, 34px);
+    margin: 45px 0 16px;
+    line-height: 1.4;
+}
 
-        .article-header h1 {
-            margin: 0 0 20px;
-            color: var(--text, #102537);
-            font-family: Georgia, serif;
-            font-size: clamp(32px, 5vw, 54px);
-            line-height: 1.2;
-        }
+.article-body h3 {
+    color: var(--text, #102537);
+}
 
-        .article-intro {
-            max-width: 760px;
-            margin: 0 auto;
-            color: var(--muted, #687481);
-            font-size: 18px;
-            line-height: 1.9;
-        }
+.article-body p {
+    color: var(--muted, #687481);
+    font-size: 16px;
+    line-height: 1.95;
+    margin-bottom: 22px;
+}
 
-        .article-image {
-            width: 100%;
-            max-height: 520px;
-            aspect-ratio: 16 / 9;
-            display: block;
-            margin: 35px auto 40px;
-            border-radius: 20px;
-            object-fit: cover;
-        }
+.article-category {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 30px;
+    background: #fff0f2;
+    color: #dc4962;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
 
-        .article-body {
-            max-width: 780px;
-            margin: 0 auto;
-        }
+/* =================================
+   HERO SECTION
+================================= */
 
-        .article-body h2 {
-            margin: 38px 0 14px;
-            color: var(--text, #102537);
-            font-size: clamp(23px, 3vw, 30px);
-            line-height: 1.4;
-        }
+.article-header {
+    min-height: 560px;
+    border-radius: 22px;
+    padding: 55px 30px;
+    margin-bottom: 40px;
 
-        .article-body p {
-            margin: 0 0 20px;
-            color: var(--muted, #687481);
-            font-size: 16px;
-            line-height: 1.95;
-        }
+    background:
+        linear-gradient(
+            rgba(255,255,255,.75),
+            rgba(255,255,255,.75)
+        ),
+        url('imges/Close-up of decorative embroidery and colorful thread.jpg');
 
-        .article-highlight {
-            margin: 32px 0;
-            padding: 25px;
-            border-left: 4px solid var(--pink, #dc4962);
-            border-radius: 0 12px 12px 0;
-            background: var(--light, #fff5f1);
-            color: var(--text, #102537);
-            font-size: 17px;
-            line-height: 1.8;
-        }
+    background-position: center;
+    background-size: cover;
 
-        .article-cta {
-            margin-top: 50px;
-            padding: 35px 25px;
-            border: 1px solid var(--border, #e5e5e5);
-            border-radius: 20px;
-            background: var(--card, #ffffff);
-            text-align: center;
-        }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-        .article-cta h2 {
-            margin: 0 0 12px;
-            color: var(--text, #102537);
-            font-size: clamp(24px, 4vw, 34px);
-        }
+    animation: heroAppear 1s ease both;
+}
 
-        .article-cta p {
-            margin: 0 auto 22px;
-            max-width: 600px;
-            color: var(--muted, #687481);
-            line-height: 1.8;
-        }
+.article-header h1 {
+    max-width: 800px;
+    margin: 22px auto;
+    font-family: Georgia, serif;
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.2;
+    color: #102537;
+}
 
-        .article-button {
-            display: inline-block;
-            padding: 14px 26px;
-            border-radius: 30px;
-            background: var(--pink, #dc4962);
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 700;
-        }
+.article-header p {
+    max-width: 700px;
+    font-size: 18px;
+    line-height: 1.9;
+    color: #526170;
+}
 
-        .article-back {
-            display: inline-block;
-            margin-top: 22px;
-            color: var(--pink, #dc4962);
-            text-decoration: none;
-            font-weight: 700;
-        }
+@keyframes heroAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        @media (max-width: 600px) {
-            .article-page {
-                padding: 35px 17px 55px;
-            }
+/* =================================
+   QUICK NAVIGATION
+================================= */
 
-            .article-image {
-                aspect-ratio: 4 / 3;
-                margin: 25px auto 30px;
-                border-radius: 14px;
-            }
+.quick-navigation {
+    position: sticky;
+    top: 105px;
+    padding: 26px;
+    border-radius: 20px;
+    border: 1px solid #20b99f;
+    background: var(--card, #fff);
+    box-shadow: 0 8px 25px rgba(0,0,0,.05);
 
-            .article-intro {
-                font-size: 16px;
-            }
+    animation: sidebarEntrance .9s ease both;
+    transition: .4s ease;
+}
 
-            .article-body p {
-                font-size: 15px;
-                line-height: 1.85;
-            }
+.quick-navigation:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(32,185,159,.15);
+}
 
-            .article-highlight {
-                padding: 20px;
-            }
-        }
-    </style>
+.quick-navigation h3 {
+    margin: 0 0 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #20b99f;
+    color: var(--text, #263747);
+    font-size: 21px;
+}
+
+.quick-navigation h3 i {
+    color: #20b99f;
+    margin-right: 8px;
+}
+
+.quick-navigation a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 17px 0;
+    border-bottom: 1px solid #20b99f;
+    color: var(--muted, #526170);
+    font-size: 14px;
+    text-decoration: none;
+    transition: .35s ease;
+}
+
+.quick-navigation a:last-child {
+    border: none;
+}
+
+.quick-navigation a i {
+    color: #20a990;
+    transition: .35s ease;
+}
+
+.quick-navigation a:hover {
+    padding-left: 9px;
+    color: #0b9f8b;
+}
+
+.quick-navigation a:hover i {
+    transform: translate(4px,-4px);
+    color: #087eae;
+}
+
+@keyframes sidebarEntrance {
+    from {
+        opacity: 0;
+        transform: translateX(45px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* =================================
+   ARTICLE IMAGE
+================================= */
+
+.article-main-image {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    margin: 35px 0;
+    transition: .5s ease;
+}
+
+.article-main-image:hover {
+    transform: scale(1.01);
+}
+
+/* =================================
+   HIGHLIGHT BOX
+================================= */
+
+.article-highlight {
+    margin: 35px 0;
+    padding: 28px;
+    background: var(--card, #fff5f1);
+    border-left: 5px solid var(--pink, #dc4962);
+    border-radius: 0 15px 15px 0;
+    color: var(--text, #102537);
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+/* =================================
+   IMAGE GALLERY
+================================= */
+
+.gallery-section {
+    margin-top: 55px;
+}
+
+.gallery-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.gallery-heading span {
+    color: var(--pink, #dc4962);
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.gallery-heading h2 {
+    font-size: clamp(28px,4vw,40px);
+    font-family: Georgia, serif;
+    color: var(--text, #102537);
+    margin: 12px 0;
+}
+
+.gallery-heading p {
+    color: var(--muted, #687481);
+    line-height: 1.8;
+}
+
+.embroidery-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 22px;
+}
+
+.gallery-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 17px;
+    background: var(--card, #fff);
+    border: 1px solid var(--border, #eee);
+    transition: .4s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform .6s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-info {
+    padding: 20px;
+}
+
+.gallery-info h3 {
+    margin: 0 0 9px;
+    color: var(--text, #102537);
+    font-size: 20px;
+}
+
+.gallery-info p {
+    color: var(--muted, #687481);
+    line-height: 1.7;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* =================================
+   CONTENT CARDS
+================================= */
+
+.content-cards {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 22px;
+    margin: 30px 0;
+}
+
+.content-card {
+    padding: 25px;
+    border-radius: 17px;
+    border: 1px solid var(--border, #eee);
+    background: var(--card, #fff);
+    transition: .35s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(0,0,0,.08);
+}
+
+.content-card i {
+    font-size: 30px;
+    color: var(--pink, #dc4962);
+    margin-bottom: 15px;
+}
+
+.content-card h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.content-card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* =================================
+   DESIGN TIPS
+================================= */
+
+.design-tips {
+    padding: 32px;
+    border-radius: 20px;
+    background: var(--card, #fff);
+    border: 1px solid var(--border, #eee);
+    margin: 40px 0;
+}
+
+.design-tips ul {
+    padding-left: 22px;
+    margin: 15px 0 0;
+}
+
+.design-tips li {
+    padding: 8px 0;
+    color: var(--muted, #687481);
+    line-height: 1.7;
+}
+
+.design-tips li::marker {
+    color: var(--pink, #dc4962);
+}
+
+/* =================================
+   CTA SECTION
+================================= */
+
+.article-cta {
+    margin-top: 55px;
+    padding: 45px 25px;
+    text-align: center;
+    border-radius: 22px;
+    border: 1px solid var(--border, #eee);
+    background: var(--card, #fff);
+}
+
+.article-cta h2 {
+    margin: 0 0 15px;
+    font-size: clamp(26px,4vw,38px);
+}
+
+.article-cta p {
+    max-width: 620px;
+    margin: 0 auto 25px;
+    line-height: 1.8;
+    color: var(--muted, #687481);
+}
+
+.article-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: var(--pink, #dc4962);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: .3s ease;
+}
+
+.article-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(220,73,98,.25);
+}
+
+/* =================================
+   CARE GUIDE
+================================= */
+
+.care-section {
+    padding: 75px 6%;
+    background: var(--light);
+}
+
+.care-container {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.care-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.care-heading span {
+    color: var(--pink);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.care-heading h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(28px,4vw,42px);
+    color: var(--text);
+    margin: 12px 0;
+}
+
+.care-heading p {
+    max-width: 680px;
+    margin: auto;
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.care-grid {
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    gap: 20px;
+}
+
+.care-card {
+    padding: 25px;
+    border-radius: 17px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    transition: .35s ease;
+}
+
+.care-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.08);
+}
+
+.care-card i {
+    font-size: 30px;
+    color: var(--pink);
+}
+
+.care-card h3 {
+    color: var(--text);
+}
+
+.care-card p {
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media(max-width:1050px) {
+    .article-layout {
+        grid-template-columns: minmax(0,1fr) 260px;
+        gap: 22px;
+    }
+
+    .care-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+
+@media(max-width:760px) {
+    .article-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-navigation {
+        position: static;
+        order: -1;
+        margin-bottom: 25px;
+    }
+
+    .article-header {
+        min-height: 430px;
+        padding: 35px 20px;
+    }
+
+    .article-main-image {
+        height: 300px;
+    }
+}
+
+@media(max-width:600px) {
+    .article-page {
+        padding: 35px 16px 55px;
+    }
+
+    .embroidery-gallery,
+    .content-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-card img {
+        height: 220px;
+    }
+
+    .care-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .article-main-image {
+        height: 240px;
+    }
+
+    .design-tips {
+        padding: 22px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+</style>
 </head>
 
 <body>
 
+<!-- =================================
+     HEADER
+================================= -->
+
 <header class="header">
+
     <div class="logo">
-        <img src="imges/Embroidered S-C Needlework Emblem.png" alt="StitchCraft Logo">
+
+        <img src="imges/Embroidered S-C Needlework Emblem.png"
+             alt="StitchCraft Logo">
 
         <div class="brand-text">
+
             <a href="index.html">
                 <span class="brand-stitch">Stitch </span>
-                <span style="color: lightblue;">&amp;</span>
+                <span style="color:lightblue;">&amp;</span>
                 <span class="brand-craft"> Craft</span>
             </a>
+
             <p>choose your own design</p>
+
         </div>
     </div>
 
     <input type="checkbox" id="menu-toggle">
 
-    <label for="menu-toggle" class="menu-icon" aria-label="Toggle navigation">
+    <label for="menu-toggle" class="menu-icon"
+           aria-label="Toggle navigation">
+
         <span></span>
         <span></span>
         <span></span>
+
     </label>
 
     <div class="navbar">
+
         <nav>
+
             <div class="dropdown" id="homeDropdown">
-                <a href="index.html" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+
+                <a href="index.html" class="dropdown-toggle"
+                   aria-haspopup="true" aria-expanded="false">
+
                     Home <i class="fa-solid fa-chevron-down"></i>
+
                 </a>
 
                 <div class="dropdown-menu">
+
                     <a href="index.html">Home – Premium</a>
                     <a href="eindex.html">Home – Elite</a>
+
                 </div>
             </div>
 
@@ -232,353 +653,806 @@
             <a href="blog.html" class="nav-link active">Blog</a>
             <a href="about.html" class="nav-link">About</a>
             <a href="contact.html" class="nav-link">Contact</a>
+
         </nav>
 
         <div class="display-options">
-            <button type="button" id="rtlMode" class="display-btn"
-                aria-label="Toggle text direction" title="Switch to RTL">RTL</button>
 
-            <button type="button" id="themeMode" class="display-btn"
-                aria-label="Switch theme" title="Toggle theme">
+            <button type="button" id="rtlMode"
+                    class="display-btn"
+                    aria-label="Toggle text direction"
+                    title="Switch to RTL">RTL</button>
+
+            <button type="button" id="themeMode"
+                    class="display-btn"
+                    aria-label="Switch theme"
+                    title="Toggle theme">
+
                 <i class="fa-solid fa-moon"></i>
+
             </button>
+
         </div>
 
         <div class="nav-actions">
+
             <a href="custom.html" class="btn">Get a Quote</a>
+
         </div>
+
     </div>
+
 </header>
 
+
+<!-- =================================
+     MAIN ARTICLE
+================================= -->
+
 <main>
-    <article class="article-page">
-        <div class="article-container">
 
-            <div class="article-breadcrumb">
-                <a href="index.html">Home</a>
-                <span> / </span>
-                <a href="blog.html">Blog</a>
-                <span> / The Art of Embroidery</span>
-            </div>
+<section class="article-page">
 
-            <header class="article-header">
-                <span class="article-category">EMBROIDERY &amp; STYLE</span>
+<div class="article-layout">
 
-                <h1>The Art of Embroidery: Adding a Personal Touch to Everyday Style</h1>
+<!-- LEFT CONTENT -->
 
-                <p class="article-intro">
-                    Discover how embroidery transforms everyday clothing into
-                    something unique, stylish, and meaningful through creative
-                    designs and thoughtful details.
-                </p>
-            </header>
+<div class="article-container">
 
-            <img
-                src="imges/Close-up of decorative embroidery and colorful thread.jpg"
-                alt="Close-up of decorative embroidery and colorful threads"
-                class="article-image"
-                loading="eager"
-            >
+    <!-- HERO -->
 
-            <div class="article-body">
+    <header class="article-header">
 
-                <p>
-                    Embroidery is a beautiful art that transforms ordinary
-                    clothing into something unique, stylish, and meaningful.
-                    From traditional hand-stitched designs to modern machine
-                    embroidery, this creative technique has remained popular
-                    for generations. Today, embroidery is not just a traditional
-                    craft; it is also an important part of modern fashion and
-                    personal expression.
-                </p>
+        <span class="article-category">
+            EMBROIDERY &amp; STYLE
+        </span>
 
-                <h2>The Beauty of Embroidery</h2>
+        <h1>
+            The Art of Embroidery: Adding a Personal Touch to Everyday Style
+        </h1>
 
-                <p>
-                    Embroidery involves decorating fabric using needles and
-                    threads, sometimes combined with beads, sequins, or other
-                    decorative materials. Simple patterns, colourful flowers,
-                    geometric shapes, and intricate designs can turn plain
-                    garments into eye-catching fashion pieces. Each stitch
-                    adds character and creativity, making embroidered clothing
-                    special.
-                </p>
+        <p>
+            Discover how embroidery transforms everyday clothing into
+            something unique, stylish, and meaningful through creative
+            designs and thoughtful details.
+        </p>
 
-                <p>
-                    One of the greatest advantages of embroidery is its
-                    versatility. It can be used on T-shirts, jeans, shirts,
-                    dresses, jackets, handbags, scarves, and even shoes. A
-                    small embroidered flower on a shirt or a personalised
-                    initial on a handkerchief can create a distinctive look
-                    without making an outfit too elaborate.
-                </p>
+    </header>
 
-                <div class="article-highlight">
-                    Embroidery is more than decoration. It is a creative way
-                    to express your personality, preserve meaningful details,
-                    and make everyday items feel uniquely yours.
-                </div>
 
-                <h2>Making Everyday Fashion Personal</h2>
+    <div class="article-body">
 
-                <p>
-                    In a world where many fashion trends look similar,
-                    embroidery offers an opportunity to express individuality.
-                    People can choose designs that reflect their interests,
-                    personalities, and cultural backgrounds. Initials,
-                    favourite symbols, meaningful quotes, and customised
-                    patterns make everyday clothing feel more personal.
-                </p>
+        <!-- OVERVIEW -->
 
-                <p>
-                    For example, a plain denim jacket can become a stylish
-                    statement piece with embroidered flowers on the sleeves.
-                    A simple cotton shirt can look more elegant with delicate
-                    embroidery around the collar. Even an ordinary tote bag
-                    can become fashionable with a creative, colourful design.
-                </p>
+        <h2 id="overview">Discover the Beauty of Embroidery</h2>
 
-                <h2>Traditional Craft Meets Modern Fashion</h2>
+        <p>
+            Embroidery is a beautiful art that transforms ordinary clothing
+            into something unique, stylish, and meaningful. From traditional
+            hand-stitched designs to modern machine embroidery, this creative
+            technique has remained popular for generations.
+        </p>
 
-                <p>
-                    Embroidery has a rich history across many cultures.
-                    Traditional techniques and patterns continue to inspire
-                    modern designers, who combine heritage craftsmanship
-                    with contemporary styles. Minimalist embroidery, bold
-                    floral patterns, and colourful threadwork are popular
-                    ways to bring traditional artistry into everyday wardrobes.
-                </p>
+        <p>
+            Today, embroidery is more than just a traditional craft.
+            It is an important part of modern fashion, allowing people
+            to express their personality through colours, patterns,
+            textures, and creative designs.
+        </p>
 
-                <p>
-                    Both hand embroidery and machine embroidery have their
-                    own characteristics. Hand embroidery offers an artistic,
-                    handcrafted touch, while machine embroidery helps create
-                    consistent designs. Regardless of the method, embroidery
-                    adds texture, colour, and visual interest to clothing.
-                </p>
+        <img class="article-main-image"
+             src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?auto=format&fit=crop&w=1400&q=85"
+             alt="Creative embroidery and sewing workspace"
+             loading="lazy">
 
-                <h2>Choosing the Right Embroidery Design</h2>
 
-                <p>
-                    When choosing an embroidery design, consider the fabric,
-                    the size of the pattern, the colours, and where the
-                    embroidery will be placed. Small, subtle designs can
-                    create an elegant look, while larger colourful patterns
-                    can make a bold statement.
-                </p>
+        <!-- BEAUTY -->
 
-                <p>
-                    Think about how the design complements the item you want
-                    to personalise. A suitable design can enhance the fabric
-                    without overwhelming its original style.
-                </p>
+        <h2 id="beauty">The Beauty of Embroidery</h2>
 
-                <h2>Make Your Style Your Own</h2>
+        <p>
+            Embroidery involves decorating fabric using needles and threads,
+            sometimes combined with beads, sequins, and other decorative
+            materials. Simple patterns, colourful flowers, geometric shapes,
+            and intricate designs can turn plain garments into eye-catching
+            fashion pieces.
+        </p>
 
-                <p>
-                    Embroidery brings together creativity, tradition, and
-                    personal expression. Whether you prefer delicate details
-                    or bold designs, embroidered pieces offer a special way
-                    to make everyday fashion more meaningful.
-                </p>
+        <p>
+            It can be used on T-shirts, jeans, shirts, dresses, jackets,
+            handbags, scarves, and even shoes. A small embroidered flower
+            or a personalised initial can make an ordinary item special.
+        </p>
 
-                <p>
-                    At StitchCraft, you can explore ideas for custom designs
-                    and personalised embroidery that reflect your own style.
-                    Share your idea and discover the possibilities for your
-                    next project.
-                </p>
+        <div class="article-highlight">
+            <i class="fa-solid fa-quote-left"
+               style="color:var(--pink);margin-right:8px;"></i>
 
-                <section class="article-cta">
-                    <h2>Have an Embroidery Idea?</h2>
-
-                    <p>
-                        Bring your ideas to life with personalised embroidery.
-                        Contact StitchCraft to discuss a design for clothing,
-                        gifts, or your next creative project.
-                    </p>
-
-                    <a href="contact.html" class="article-button">
-                        Discuss Your Idea →
-                    </a>
-
-                    <br>
-
-                    <a href="blog.html" class="article-back">
-                        <i class="fa-solid fa-arrow-left"></i>
-                        Back to Blog
-                    </a>
-                </section>
-
-            </div>
+            Embroidery is more than decoration. It is a creative way
+            to express your personality, preserve meaningful details,
+            and make everyday items feel uniquely yours.
         </div>
-    </article>
+
+
+        <!-- IMAGE GALLERY -->
+
+        <section class="gallery-section" id="gallery">
+
+            <div class="gallery-heading">
+
+                <span>OUR INSPIRATION</span>
+
+                <h2>Beautiful Embroidery Inspirations</h2>
+
+                <p>
+                    Explore different embroidery styles and discover
+                    creative ideas for your next design.
+                </p>
+
+            </div>
+
+            <div class="embroidery-gallery">
+
+                <article class="gallery-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=85"
+                        alt="Fashion and fabric inspiration"
+                        loading="lazy">
+
+                    <div class="gallery-info">
+
+                        <h3>Floral Embroidery</h3>
+
+                        <p>
+                            Beautiful floral patterns that bring colour
+                            and elegance to everyday fashion.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="gallery-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85"
+                        alt="Modern fashion design inspiration"
+                        loading="lazy">
+
+                    <div class="gallery-info">
+
+                        <h3>Modern Fashion</h3>
+
+                        <p>
+                            Contemporary fashion ideas that combine
+                            creativity with personalised styling.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="gallery-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85"
+                        alt="Elegant clothing and fashion"
+                        loading="lazy">
+
+                    <div class="gallery-info">
+
+                        <h3>Elegant Designs</h3>
+
+                        <p>
+                            Minimal and elegant design inspirations
+                            for special occasions.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="gallery-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=85"
+                        alt="Creative sewing and craft materials"
+                        loading="lazy">
+
+                    <div class="gallery-info">
+
+                        <h3>Creative Craft</h3>
+
+                        <p>
+                            Discover the beauty of handmade creativity
+                            and detailed craftsmanship.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- PERSONAL FASHION -->
+
+        <h2 id="personal">Making Everyday Fashion Personal</h2>
+
+        <p>
+            In a world where many fashion trends look similar,
+            embroidery offers an opportunity to express individuality.
+            People can choose designs that reflect their interests,
+            personalities, and cultural backgrounds.
+        </p>
+
+        <p>
+            A plain denim jacket can become a stylish statement piece
+            with embroidered flowers on the sleeves. A simple cotton
+            shirt can look more elegant with delicate embroidery
+            around the collar.
+        </p>
+
+        <img class="article-main-image"
+             src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1400&q=85"
+             alt="Fashion clothing inspiration"
+             loading="lazy">
+
+
+        <!-- TECHNIQUES -->
+
+        <h2 id="techniques">Different Types of Embroidery</h2>
+
+        <p>
+            Embroidery offers many different techniques. Each technique
+            has its own appearance and creative possibilities.
+        </p>
+
+        <div class="content-cards">
+
+            <article class="content-card">
+
+                <i class="fa-solid fa-hand-sparkles"></i>
+
+                <h3>Hand Embroidery</h3>
+
+                <p>
+                    Hand embroidery gives designs a personal,
+                    artistic appearance. Each stitch is created
+                    with care and attention to detail.
+                </p>
+
+            </article>
+
+
+            <article class="content-card">
+
+                <i class="fa-solid fa-gears"></i>
+
+                <h3>Machine Embroidery</h3>
+
+                <p>
+                    Machine embroidery helps create consistent
+                    patterns and detailed designs on different
+                    types of fabric.
+                </p>
+
+            </article>
+
+
+            <article class="content-card">
+
+                <i class="fa-solid fa-leaf"></i>
+
+                <h3>Floral Embroidery</h3>
+
+                <p>
+                    Floral patterns use flowers, leaves, and
+                    natural shapes to create beautiful designs.
+                </p>
+
+            </article>
+
+
+            <article class="content-card">
+
+                <i class="fa-solid fa-star"></i>
+
+                <h3>Decorative Embroidery</h3>
+
+                <p>
+                    Decorative designs combine different
+                    patterns, colours, and textures for
+                    a unique appearance.
+                </p>
+
+            </article>
+
+        </div>
+
+
+        <!-- TRADITIONAL -->
+
+        <h2 id="traditional">Traditional Craft Meets Modern Fashion</h2>
+
+        <p>
+            Embroidery has a rich history across many cultures.
+            Traditional techniques and patterns continue to inspire
+            modern designers, who combine heritage craftsmanship
+            with contemporary styles.
+        </p>
+
+        <p>
+            Minimalist embroidery, bold floral patterns, and colourful
+            threadwork are popular ways to bring traditional artistry
+            into everyday wardrobes.
+        </p>
+
+
+        <!-- DESIGN SELECTION -->
+
+        <h2 id="choosing">Choosing the Right Embroidery Design</h2>
+
+        <p>
+            Choosing the right embroidery design is important for
+            creating a beautiful final result. Consider the fabric,
+            size, colours, design placement, and purpose of the garment.
+        </p>
+
+        <img class="article-main-image"
+             src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1400&q=85"
+             alt="Creative design planning"
+             loading="lazy">
+
+
+        <!-- DESIGN TIPS -->
+
+        <div class="design-tips">
+
+            <h3>
+                <i class="fa-solid fa-lightbulb"
+                   style="color:var(--pink);margin-right:8px;"></i>
+                Tips for Selecting an Embroidery Design
+            </h3>
+
+            <ul>
+
+                <li>
+                    Choose a design that matches the fabric.
+                </li>
+
+                <li>
+                    Select colours that complement the garment.
+                </li>
+
+                <li>
+                    Consider the size and placement of the pattern.
+                </li>
+
+                <li>
+                    Choose a design that suits the occasion.
+                </li>
+
+                <li>
+                    Keep the design balanced and visually appealing.
+                </li>
+
+                <li>
+                    Consider the care requirements of the fabric.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- FABRIC SELECTION -->
+
+        <h2 id="fabric">Selecting the Right Fabric and Threads</h2>
+
+        <p>
+            Fabric and thread selection play an important role in
+            embroidery. Different fabrics have different textures,
+            thicknesses, and stitching requirements.
+        </p>
+
+        <p>
+            Cotton is commonly used for many embroidery projects.
+            Linen offers a natural texture, while denim provides
+            a sturdy surface for decorative designs.
+        </p>
+
+        <div class="content-cards">
+
+            <article class="content-card">
+
+                <i class="fa-solid fa-shirt"></i>
+
+                <h3>Fabric Selection</h3>
+
+                <p>
+                    Select a fabric that suits the design,
+                    stitching technique, and intended use
+                    of the garment.
+                </p>
+
+            </article>
+
+
+            <article class="content-card">
+
+                <i class="fa-solid fa-palette"></i>
+
+                <h3>Thread Selection</h3>
+
+                <p>
+                    Choose suitable thread colours and
+                    thicknesses to create a balanced
+                    and attractive design.
+                </p>
+
+            </article>
+
+        </div>
+
+
+        <!-- PERSONAL STYLE -->
+
+        <h2 id="style">Make Your Style Your Own</h2>
+
+        <p>
+            Embroidery brings together creativity, tradition,
+            and personal expression. Whether you prefer delicate
+            details or bold designs, embroidered pieces offer
+            a special way to make everyday fashion more meaningful.
+        </p>
+
+        <p>
+            At StitchCraft, you can explore ideas for custom designs
+            and personalised embroidery that reflect your own style.
+            Share your idea and discover the possibilities for
+            your next project.
+        </p>
+
+
+        <!-- CTA -->
+
+        <section class="article-cta" id="custom-design">
+
+            <i class="fa-solid fa-wand-magic-sparkles"
+               style="font-size:38px;color:var(--pink);"></i>
+
+            <h2>Have an Embroidery Idea?</h2>
+
+            <p>
+                Bring your ideas to life with personalised embroidery.
+                Contact StitchCraft to discuss a design for clothing,
+                gifts, or your next creative project.
+            </p>
+
+            <a href="custom.html" class="article-button">
+                <i class="fa-solid fa-pen-nib"></i>
+                Create Your Custom Design
+            </a>
+
+            <br><br>
+
+            <a href="blog.html"
+               style="color:var(--pink);text-decoration:none;font-weight:700;">
+
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Blog
+
+            </a>
+
+        </section>
+
+    </div>
+
+</div>
+
+
+<!-- =================================
+     RIGHT SIDEBAR
+================================= -->
+
+<aside class="quick-navigation">
+
+    <h3>
+        <i class="fa-solid fa-compass"></i>
+        Quick Navigation
+    </h3>
+
+    <a href="#overview">
+        <span>Overview</span>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+
+    <a href="#beauty">
+        <span>Beauty of Embroidery</span>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+
+    <a href="#gallery">
+        <span>Design Gallery</span>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+
+    <a href="#personal">
+        <span>Personal Fashion</span>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+
+    <a href="#techniques">
+        <span>Embroidery Types</span>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+
+    <a href="#traditional">
+        <span>Traditional &amp; Modern</span>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+
+    <a href="#choosing">
+        <span>Choosing Designs</span>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+
+    <a href="#fabric">
+        <span>Fabric &amp; Threads</span>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+
+    <a href="#style">
+        <span>Personal Style</span>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+
+    <a href="#custom-design">
+        <span>Custom Design</span>
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+
+</aside>
+
+</div>
+
+</section>
+
 </main>
 
-<!-- SECTION: EMBROIDERY CARE TIPS -->
-<section id="embroidery-care" style="
-    padding: 70px 6%;
-    background: var(--light);
-    color: var(--text);
-">
-    <div style="max-width: 1100px; margin: auto;">
 
-        <div style="text-align: center; margin-bottom: 40px;">
-            <span style="
-                color: var(--pink);
-                font-size: 13px;
-                font-weight: 700;
-                letter-spacing: 3px;
-            ">CARE GUIDE</span>
+<!-- =================================
+     EMBROIDERY CARE GUIDE
+================================= -->
 
-            <h2 style="
-                font-size: clamp(28px, 4vw, 42px);
-                margin: 12px 0;
-                color: var(--text);
-            ">How to Care for Embroidered Clothing</h2>
+<section class="care-section" id="embroidery-care">
 
-            <p style="
-                max-width: 680px;
-                margin: auto;
-                color: var(--muted);
-                line-height: 1.8;
-            ">
+    <div class="care-container">
+
+        <div class="care-heading">
+
+            <span>CARE GUIDE</span>
+
+            <h2>How to Care for Embroidered Clothing</h2>
+
+            <p>
                 A little extra care can help embroidered designs
                 maintain their appearance and texture.
             </p>
+
         </div>
 
-        <div style="
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 22px;
-        ">
+        <div class="care-grid">
 
-            <article style="
-                padding: 25px;
-                background: var(--card);
-                border: 1px solid var(--border);
-                border-radius: 16px;
-            ">
-                <div style="font-size: 32px; margin-bottom: 14px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
-  <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z"/>
-</svg></div>
-                <h3 style="color: var(--text);">Wash Gently</h3>
-                <p style="color: var(--muted); line-height: 1.8;">
-                    Follow the garment care label. Use a gentle wash cycle
-                    when appropriate to help protect the embroidered threads.
+            <article class="care-card">
+
+                <i class="fa-solid fa-shirt"></i>
+
+                <h3>Wash Gently</h3>
+
+                <p>
+                    Follow the garment care label. Use a gentle wash
+                    cycle when appropriate to protect embroidered threads.
                 </p>
+
             </article>
 
-            <article style="
-                padding: 25px;
-                background: var(--card);
-                border: 1px solid var(--border);
-                border-radius: 16px;
-            ">
-                <div style="font-size: 32px; margin-bottom: 14px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun" viewBox="0 0 16 16">
-  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
-</svg>
 
-                </div>
-                <h3 style="color: var(--text);">Dry Carefully</h3>
-                <p style="color: var(--muted); line-height: 1.8;">
-                    Avoid excessive heat. Choose a drying method suitable
-                    for the fabric and the garment's care instructions.
+            <article class="care-card">
+
+                <i class="fa-solid fa-sun"></i>
+
+                <h3>Dry Carefully</h3>
+
+                <p>
+                    Avoid excessive heat. Choose a drying method
+                    suitable for the fabric.
                 </p>
+
             </article>
 
-            <article style="
-                padding: 25px;
-                background: var(--card);
-                border: 1px solid var(--border);
-                border-radius: 16px;
-            ">
-                <div style="font-size: 32px; margin-bottom: 14px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-</svg></div>
-                <h3 style="color: var(--text);">Iron with Care</h3>
-                <p style="color: var(--muted); line-height: 1.8;">
-                    Use the recommended temperature for your fabric.
-                    If needed, iron inside out to protect the embroidery.
+
+            <article class="care-card">
+
+                <i class="fa-solid fa-temperature-low"></i>
+
+                <h3>Iron with Care</h3>
+
+                <p>
+                    Use the recommended temperature. When needed,
+                    iron inside out to protect the embroidery.
                 </p>
+
             </article>
 
-            <article style="
-                padding: 25px;
-                background: var(--card);
-                border: 1px solid var(--border);
-                border-radius: 16px;
-            ">
-                <div style="font-size: 32px; margin-bottom: 14px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-feather2" viewBox="0 0 16 16">
-  <path d="M7.5 1.063v9.556L6 8.819V3a2 2 0 0 1 1.5-1.937M8 0a3 3 0 0 0-3 3v6a.5.5 0 0 0 .116.32L7.5 12.181V15.5a.5.5 0 0 0 1 0v-3.319l2.384-2.86A.5.5 0 0 0 11 9V3a3 3 0 0 0-3-3m.5 1.063A2 2 0 0 1 10 3v.293l-1.5 1.5zM10 4.707V8.82l-1.5 1.8V6.207z"/>
-</svg></div>
-                <h3 style="color: var(--text);">Store Properly</h3>
-                <p style="color: var(--muted); line-height: 1.8;">
-                    Keep embroidered garments clean and dry. Store them
-                    carefully to avoid snagging or damaging the threads.
+
+            <article class="care-card">
+
+                <i class="fa-solid fa-box"></i>
+
+                <h3>Store Properly</h3>
+
+                <p>
+                    Keep embroidered garments clean and dry.
+                    Store them carefully to avoid damaging threads.
                 </p>
+
             </article>
 
         </div>
+
     </div>
+
 </section>
 
+
+<!-- =================================
+     FOOTER
+================================= -->
+
 <footer class="footer" id="contact">
-  <div class="footer-grid">
-    <div id="about">
-      <div class="logo">
-      <img src="imges/Embroidered S-C Needlework Emblem.png" alt="StitchCraft Logo" style="margin-top: -20px;">
-      <div class="brand-text">
-        <a href="#home"><span class="brand-stitch">Stitch </span><span style="color: lightblue;">&amp;</span><span class="brand-craft"> Craft</span></a>
-        <p><span style="color: black;"> choose your own design</span></p>
-      </div>
-    </div>
-      <p><span style="color: black;"> Details. Lasting memories.<br>Personalized with care, one stitch at a time.</span></p>
-      <div class="socials">
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.twitter.com/" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.pinterest.com/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="contact.html"><i class="fab fa-whatsapp"></i></a>
-      </div>
+
+    <div class="footer-grid">
+
+        <div id="about">
+
+            <div class="logo">
+
+                <img src="imges/Embroidered S-C Needlework Emblem.png"
+                     alt="StitchCraft Logo"
+                     style="margin-top:-20px;">
+
+                <div class="brand-text">
+
+                    <a href="index.html">
+                        <span class="brand-stitch">Stitch </span>
+                        <span style="color:lightblue;">&amp;</span>
+                        <span class="brand-craft"> Craft</span>
+                    </a>
+
+                    <p>
+                        <span style="color:black;">
+                            choose your own design
+                        </span>
+                    </p>
+
+                </div>
+
+            </div>
+
+            <p>
+                <span style="color:black;">
+                    Details. Lasting memories.<br>
+                    Personalized with care, one stitch at a time.
+                </span>
+            </p>
+
+            <div class="socials">
+
+                <a href="https://www.facebook.com/"
+                   target="_blank" rel="noopener"
+                   aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.twitter.com/"
+                   target="_blank" rel="noopener"
+                   aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a href="https://www.pinterest.com/"
+                   target="_blank" rel="noopener"
+                   aria-label="Pinterest">
+                    <i class="fab fa-pinterest"></i>
+                </a>
+
+                <a href="https://www.instagram.com/"
+                   target="_blank" rel="noopener"
+                   aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="contact.html" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>Customer Support</h3>
+
+            <a href="contact.html">FAQs</a>
+            <a href="contact.html">Shipping &amp; Delivery</a>
+            <a href="contact.html">Returns &amp; Exchanges</a>
+            <a href="contact.html">Care Instructions</a>
+            <a href="contact.html">Privacy Policy</a>
+
+        </div>
+
+
+        <div>
+
+            <h3>Contact Us</h3>
+
+            <a href="mailto:info@stitchcraft.com">
+                info@stitchcraft.com
+            </a>
+
+            <a href="tel:+910000000000">
+                +91 0000000000
+            </a>
+
+            <p>
+                <span style="color:black;">
+                    Monday - Friday: 9:00 AM - 6:00 PM
+                </span>
+            </p>
+
+            <p>
+                <span style="color:black;">
+                    B.Kothakota, Near Madanapalli, Annamayya(D)
+                </span>
+            </p>
+
+        </div>
+
     </div>
 
-    <div>
-      <h3>Quick Links</h3>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <!--<a href="custom.html">Custom Design</a>
-      <a href="bulk.html">Bulk Orders</a>-->
-      <a href="services.html">Services</a>
-      <a href="blog.html">Blog</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </div>
 
-    <div>
-      <h3>Customer Support</h3>
-      <a href="contact.html">FAQs</a>
-      <a href="contact.html">Shipping &amp; Delivery</a>
-      <a href="contact.html">Returns &amp; Exchanges</a>
-      <a href="contact.html">Care Instructions</a>
-      <a href="contact.html">Privacy Policy</a>
-    </div>
+    <div class="copyright">
 
-    <div>
-      <h3>Contact Us</h3>
-      <a href="mailto:info@stitchcraft.com"> info@stitchcraft.com</a>
-      <a href="tel:+91 0000000000"> +91 0000000000</a>
-      <p><span style="color: black;">Monday - Friday: 9:00 AM - 6:00 PM</span></p>
-      <p><span style="color: black;"> B.Kothakota,Near Madanapalli,Annamayya(D)</span></p>
+        <p>© 2026 StitchCraft. All rights reserved.</p>
+
+        <p>Terms and Conditions</p>
 
     </div>
-  </div>
 
-  <div class="copyright">
-    <p>© 2026 StitchCraft. All rights reserved.</p>
-    <p>Terms and Conditions</p>
-  </div>
 </footer>
 
 
@@ -586,4 +1460,3 @@
 
 </body>
 </html>
-```
